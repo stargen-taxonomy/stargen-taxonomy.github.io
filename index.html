@@ -1,0 +1,272 @@
+
+<!DOCTYPE html>
+<html>
+
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    <title>★-Gen</title>
+
+    <meta name="description" content="A Taxonomy for Evaluating Generalist Robot Policies">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- <base href="/"> -->
+
+        <!--FACEBOOK-->
+    <meta property="og:image" content="https://generalization-taxonomy.github.io/img/STAR-GEN/axes_v3.png">
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:image:width" content="682">
+    <meta property="og:image:height" content="682">
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://generalization-taxonomy.github.io/"/>
+    <meta property="og:title" content="A Taxonomy for Evaluating Generalist Robot Policies" />
+    <meta property="og:description" content="Project page for A Taxonomy for Evaluating Generalist Robot Policies." />
+
+        <!--TWITTER-->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="A Taxonomy for Evaluating Generalist Robot Policies" />
+    <meta name="twitter:description" content="Project page for A Taxonomy for Evaluating Generalist Robot Policies." />
+    <!-- <meta name="twitter:image" content="https://rt-h.github.io/img/random_img_frames.png" /> -->
+
+
+<!--     <link rel="apple-touch-icon" href="apple-touch-icon.png"> -->
+  <!-- <link rel="icon" type="image/png" href="img/seal_icon.png"> -->
+    <!-- Place favicon.ico in the root directory -->
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.8.0/codemirror.min.css">
+    <link rel="stylesheet" href="css/app.css">
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.8.0/codemirror.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.5.3/clipboard.min.js"></script>
+    
+    <script src="js/app.js"></script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-52J0PM8XKV"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-52J0PM8XKV');
+</script>
+	
+    <style>
+        .nav-pills {
+          position: relative;
+          display: inline;
+        }
+        .imtip {
+          position: absolute;
+          top: 0;
+          left: 0;
+        }
+        h1 {
+            font-weight: bold;
+        }
+        h2 {
+            font-weight: bold;
+            text-align: center;
+        }
+        h4 {
+            font-size: 23px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container" id="main">
+        <div class="row">
+            <h2 class="col-md-12 text-center">
+                <strong><font size="+6">A Taxonomy for Evaluating Generalist Robot Policies</font></strong> </br> 
+                <!--<small>
+                    CoRL 2023
+                </small>-->
+            </h2>
+        </div>
+        <div class="row">
+            <div class="col-md-12 text-center authors">
+                <ul class="list-inline">
+                <br>
+                <li>
+                    <a href="https://scholar.google.com/citations?user=SnTMyGUAAAAJ&hl=en">Jensen Gao*</a><sup>1</sup>, 
+                    <a href="https://suneel.belkhale.com/">Suneel Belkhale*</a><sup>1</sup>, 
+                    <a href="https://sudeepdasari.github.io/">Sudeep Dasari</a><sup>2</sup>, 
+                    <a href="https://abalakrishna123.github.io/">Ashwin Balakrishna</a><sup>2</sup>, 
+                    <a href="https://robodhruv.github.io/">Dhruv Shah</a><sup>2</sup>, 
+                    <a href="https://dorsa.fyi/">Dorsa Sadigh</a><sup>1,2</sup>
+                </li>
+                <br>
+                </ul>
+                <sup>1</sup>Stanford University, <sup>2</sup>Google DeepMind Robotics
+            </div>
+            <br>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12">
+                <ul class="nav nav-pills nav-justified">
+                    <li>
+                        <a href="https://arxiv.org/" target="_blank">  <!-- TODO -->
+                        <image src="img/paper.png" height="60px">
+                            <h4><strong>Paper</strong></h4>
+                        </a>
+                    </li>
+                    <!-- <li>
+                        <a href="https://console.cloud.google.com/storage/browser/gdm-robovqa" target="_blank">
+                        <image src="img/storage_icon.png" height="60px">
+                            <h4><strong>Data</strong></h4>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/google-deepmind/robovqa/tree/main" target="_blank">
+                        <image src="img/github_icon.png" height="60px">
+                            <h4><strong>Code</strong></h4>
+                        </a>
+                    </li> -->
+                    <!-- <li>
+                        <a href="#videos">
+                        <image src="img/youtube_icon.png" height="60px">
+                            <h4><strong>Videos</strong></h4>
+                        </a>
+                    </li> -->
+                </ul>
+            </div>
+        </div>
+
+        <div style="width: 90%; float: center; text-align:center; margin: 0 auto">
+            <a href="https://generalization-taxonomy.github.io/img/STAR-GEN/axes_v3.png" target="_blank">
+                <figure>
+                    <img src="img/STAR-GEN/axes_v3.png" class="img-responsive">
+                </figure>
+            </a>
+            <!-- <br> -->
+            <figcaption>★-Gen</figcaption>
+        </div>
+        <br>
+
+        <div class="row" style="width: 80%; margin: 0 auto;"> 
+            <div class="col-md-12">
+                <h2>Abstract</h2>
+                <p>
+                    Machine learning for robotics promises to unlock generalization to novel tasks and environments. 
+                    Guided by this promise, many recent works have focused on scaling up robot data collection and developing larger, more expressive policies to achieve this. 
+                    But how do we measure progress towards this goal of policy generalization in practice? 
+                    Evaluating and quantifying generalization is the Wild West of modern robotics, with each work proposing and measuring different types of generalization in their own, often difficult to reproduce, settings. 
+                    In this work, our goal is (1) to outline the forms of generalization we believe are important in robot manipulation in a comprehensive and fine-grained manner, and (2) to provide reproducible guidelines for measuring these notions of generalization.
+                    We first propose ★-Gen, a taxonomy of generalization for robot manipulation structured around semantic, visual, and behavioral generalization. 
+                    We discuss how our taxonomy encompasses most prior notions of generalization in robotics. 
+                    Next, we instantiate ★-Gen with a concrete real-world benchmark based on the widely-used Bridge V2 dataset. 
+                    We evaluate a variety of state-of-the-art models on this benchmark to demonstrate the utility of our taxonomy in practice. 
+                    Our taxonomy of generalization can yield many interesting insights into existing models: for example, we observe that current vision-language-action models struggle with various types of semantic generalization, despite the promise of pre-training on internet-scale language datasets. 
+                    We believe ★-Gen and our guidelines can improve the dissemination and evaluation of progress towards generalization in robotics, which we hope will guide model design and future data collection efforts.
+                </p>
+            </div>
+        </div>
+
+
+
+        <br>
+        <hr class="section-divider">
+
+        <!-- <h2>Video</h2>
+
+        <p style="text-align:center; width: 80%; margin: 0 auto">
+            <video id="bg-video" autoplay loop muted playsinline controls style="display: block; width: 100%;">
+                <source src="videos/RT-H/rt_h_video_website.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </p> -->
+        <div class="row">
+            <div class="col-md-12">
+
+                <h2>Our Taxonomy: ★-Gen</h2>
+                <br>
+        
+                <p>
+                    Generalization can be a nebulous, ill-defined concept. We formalize generalization intuitively as <b>perturbations</b> relative to some base task. 
+                    For vision-language-action models (VLAs), these perturbations can fall under three main types:
+                    <li><b>Visual</b>: Changes to the initial image.</li>
+                    <li><b>Semantic</b>: Changes to the task.</li>
+                    <li><b>Behavioral</b>: Changes to the expert action distribution.</li>
+                </p>
+                <p>
+                    A given perturbation might lie at the intersection of one or more of these types. For example, changing the location of a carrot in a "Put the carrot on the plate" task changes both the image (Visual) and the required actions (Behavioral).
+                </p>
+
+                <p>
+                    Therefore we can categorize perturbations into <b>categories</b> of generalization depending on which combination of the above perturbation types they affect.
+                    For example, changing the location of the carrot would fall under the Visual + Behavioral category.
+                    We further group different perturbations in each category into human-interpretable <b>Axes</b> of generalization. Below you can find the axes we have enumerated for each category of generalization.
+                </p>
+
+                <div style="width: 90%; float: center; text-align:center; margin: 0 auto">
+                    <a href="https://generalization-taxonomy.github.io/img/STAR-GEN/detailed_axes.png" target="_blank">
+                        <figure>
+                            <img src="img/STAR-GEN/detailed_axes.png" class="img-responsive">
+                        </figure>
+                    </a>
+                    <figcaption>Detailed Axes of Generalization.</figcaption>
+                </div>
+
+                <br>
+                <p>
+                    These axes span a wide range of possible perturbations, and we show below that ★-Gen encompasses all notions of generalization in prior work:
+                </p>
+
+                <div style="width: 90%; float: center; text-align:center; margin: 0 auto">
+                    <a href="https://generalization-taxonomy.github.io/img/STAR-GEN/comparison_table.png" target="_blank">
+                        <figure>
+                            <img src="img/STAR-GEN/comparison_table.png" class="img-responsive">
+                        </figure>
+                    </a>
+                    <figcaption>Detailed Axes of Generalization.</figcaption>
+                </div>
+
+            </div>
+        </div>
+
+        <br>
+
+        <hr class="section-divider">
+
+         <div class="row">
+            <div class="col-md-12">
+                <h3>
+                    Citation 
+                </h3>
+                <div class="form-group col-md-10 col-md-offset-1">
+                    <div class="form-group col-md-10 col-md-offset-1">
+                    <textarea id="bibtex" class="form-control" readonly>
+@inproceedings{taxonomy2025arxiv,
+    title=A Taxonomy for Evaluating Generalist Robot Policies,
+    author={Jensen Gao and Suneel Belkhale and Sudeep Dasari and Ashwin Balakrishna and Dhruv Shah and Dorsa Sadigh},
+    booktitle={https://arxiv.org},
+    year={2025}
+}</textarea>
+                </div>
+                </div>
+            </div>
+             
+        </div>
+
+
+        <div class="row">
+            <div class="col-md-12">
+                <h3>
+                    Acknowledgements
+                </h3>
+                <p class="text-justify">
+                The website template was borrowed from <a href="http://jonbarron.info/">Jon Barron</a>.
+                </p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
