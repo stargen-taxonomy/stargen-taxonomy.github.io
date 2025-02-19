@@ -10,7 +10,7 @@
 
     <meta name="description" content="A Taxonomy for Evaluating Generalist Robot Policies">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
+<script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=default'></script>
     <!-- <base href="/"> -->
 
         <!--FACEBOOK-->
@@ -45,7 +45,8 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.8.0/codemirror.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.5.3/clipboard.min.js"></script>
-    
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=default'></script>
+
     <script src="js/app.js"></script>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-52J0PM8XKV"></script>
@@ -226,7 +227,61 @@
                             <img src="img/STAR-GEN/comparison_table.png" class="img-responsive">
                         </figure>
                     </a>
-                    <figcaption>Detailed Axes of Generalization.</figcaption>
+                    <figcaption>Comparing ★-Gen to notions of generalization in prior work, as well as our benchmark BridgeV2-★ .</figcaption>
+                </div>
+
+            </div>
+        </div>
+
+        <br>
+        <hr class="section-divider">
+
+        <h2>Instantiating our Taxonomy: BridgeV2-★</h2>
+        <br>
+
+        <div class="row">
+            <div class="col-md-12">
+
+                <p>
+                    We walk through an example of instantiating our taxonomy ★-Gen into a real-world benchmark for generalization evaluation.
+                    We use the popular Bridge-V2 dataset as a starting point, and we train several state of the art models on our starting data:
+                    OpenVLA, MiniVLA, and \( \pi_0 \). We pick the following base tasks which are aligned with the Bridge-V2 dataset, 
+                    and we collect 20-50 additional demos to ensure they are in distribution for our setup.
+                </p>
+
+                <div style="width: 100%; float: center; text-align:center; margin: 0 auto">
+                    <div style="width: 25%; float: left; text-align:center; margin: 0 auto">
+                        <div style="width: 90%; float: center; text-align:center; margin: 0 auto">
+                            <p><i>Put carrot on plate</i></p>
+                        <figure>
+                            <img src="img/STAR-GEN/scenes/carrot-knife/base.jpg" class="img-responsive">
+                        </figure>
+                        </div>
+                    </div>
+                    <div style="width: 25%; float: left; text-align:center; margin: 0 auto">
+                        <div style="width: 90%; float: center; text-align:center; margin: 0 auto">
+                            <p><i>Put knife on plate</i></p>
+                        <figure>
+                            <img src="img/STAR-GEN/scenes/carrot-knife/base.jpg" class="img-responsive">
+                        </figure>
+                        </div>
+                    </div>
+                    <div style="width: 25%; float: left; text-align:center; margin: 0 auto">
+                        <div style="width: 90%; float: center; text-align:center; margin: 0 auto">
+                            <p><i>Put plate in sink</i></p>
+                        <figure>
+                            <img src="img/STAR-GEN/scenes/pot-plate/base.jpg" class="img-responsive">
+                        </figure>
+                        </div>
+                    </div>
+                    <div style="width: 25%; float: left; text-align:center; margin: 0 auto">
+                        <div style="width: 90%; float: center; text-align:center; margin: 0 auto">
+                            <p><i>Flip pot upright in sink</i></p>
+                        <figure>
+                            <img src="img/STAR-GEN/scenes/pot-plate/base.jpg" class="img-responsive">
+                        </figure>
+                        </div>
+                    </div>
                 </div>
 
             </div>
@@ -234,6 +289,158 @@
 
         <br>
 
+
+        <div class="row">
+            <div class="col-md-12">
+                <p>
+                    For each of these base tasks, we chose perturbations along a subset of our axes, since some axes did not have meaningful instatiations on this dataset.
+                    Please refer to our paper for details on the specific evaluation tasks we used.
+                </p>
+            </div>
+        </div>
+
+
+        <div class="row">
+            <div class="col-md-12">
+
+                <div style="width: 40%; float: left; text-align:center; margin: 0 auto; display: inline-block">
+                    <div style="width: 95%; float: left; text-align:center; margin: 0 auto">
+                        <a href="https://generalization-taxonomy.github.io/img/STAR-GEN/results/main.png" target="_blank">
+                            <figure>
+                                <img src="img/STAR-GEN/results/main.png" class="img-responsive">
+                            </figure>
+                        </a>
+                        <figcaption>BridgeV2-★ Main results.</figcaption>
+                    </div>
+                </div>
+                <div style="width: 55%; float: center; text-align:left; margin: 0 auto; display: inline-block">
+                <p>
+                    Our main results on our BridgeV2-★ benchmark are shown on the left, which consists of in-distribution base task
+                    performance, and 55 task variations that span 13 of our axes,
+                    for a total of <b>885 real-world evaluations</b>. We find that existing
+                    generalist policies tend to struggle on most of our considered
+                    axes. In particular, semantic generalization is weak across
+                    all models, despite them leveraging large language model
+                    backbones trained on internet-scale data. This has interesting
+                    implications: e.g., rather than relying soley on improvements
+                    in language modeling to improve semantic generalization,
+                    perhaps other mechanisms are needed, such as improving
+                    language annotations in robot datasets.
+                </p>
+                <p>
+                    Each model tends to have similar strengths and weaknesses
+                    across our different axes. However, there are some notable
+                    differences between each model that the fine-grained nature
+                    of our benchmark helps reveal. For example, OpenVLA is
+                    noticeably worse at visual generalization than the other models, 
+                    while MiniVLA struggles more with forms of visual
+                    + behavioral generalization. OpenVLA performs the best
+                    at understanding object properties which could be due to
+                    it having the largest language model backbone, but it still
+                    struggles with other forms of semantic generalization. \( \pi_0 \)
+                    generally performs the best across all axes, possibly due to
+                    a more capable VLM backbone (PaliGemma), and/or better
+                    architecture design (flow-based action chunking). However,
+                    like the other models, \( \pi_0 \) still generally struggles in terms
+                    of absolute performance for most axes.
+                </p>
+                </div>
+            </div>
+            
+        </div>
+
+        <br>
+
+        <div class="row">
+            <div class="col-md-12">
+
+                <div style="width: 50%; float: left; text-align:center; margin: 0 auto; display: inline-block">
+                    <div style="width: 95%; float: left; text-align:center; margin: 0 auto">
+                        <a href="https://generalization-taxonomy.github.io/img/STAR-GEN/results/bridge_vs_oxe.png" target="_blank">
+                            <figure>
+                                <img src="img/STAR-GEN/results/bridge_vs_oxe.png" class="img-responsive">
+                            </figure>
+                        </a>
+                        <figcaption style="text-align: left;">(a) <b>Scaling robot data</b>: it is
+                            important to note that OXE is a significantly larger dataset that
+                            contains Bridge V2, along with data from over 20 other robot
+                            embodiments. Consistent with prior work, we find that
+                            larger and more diverse robot datasets can significantly improve 
+                            overall generalization. However, we observe that while
+                            generalization improves along several axes (especially some
+                            semantic and visual axes), those that the Bridge-only model
+                            struggled with the most (e.g., Viewpoint, Morphed Objects,
+                            Multi-Object Referencing) do not improve significantly.</figcaption>
+                    </div>
+                </div>
+
+                <div style="width: 50%; float: left; text-align:center; margin: 0 auto; display: inline-block">
+                    <div style="width: 95%; float: left; text-align:left; margin: 0 auto">
+                        <a href="https://generalization-taxonomy.github.io/img/STAR-GEN/results/llm_scaling.png" target="_blank">
+                            <figure>
+                                <img src="img/STAR-GEN/results/llm_scaling.png" class="img-responsive">
+                            </figure>
+                        </a>
+                        <figcaption style="text-align: left;">(b) <b>Scaling LLM backbone</b>: we compare VLA
+                            policies that share the same architecture and differ only in
+                            the large language model (LLM) backbone. Specifically, we
+                            compare OpenVLA (Bridge, FT), using Llama 2 7B,
+                            and MiniVLA (Bridge, –VQ, FT), using Qwen2.5 0.5B,
+                            both using the same pre-trained vision encoder. Note that this
+                            version of MiniVLA does not use vector quantized action
+                            chunking (designated as –VQ), and the only major difference
+                            between these two models is their LLM backbone. We find that
+                            the larger LLM backbone does improve semantic generalization, 
+                            which makes intuitive sense. However, there still remain
+                            large deficiencies in terms of absolute performance for these
+                            axes, and there is much less effect on the others, suggesting
+                            that scaling LLM size only has limited benefits.</figcaption>
+                    </div>
+                </div>
+
+
+                <div style="width: 50%; float: left; text-align:center; margin: 0 auto; display: inline-block">
+                    <div style="width: 95%; float: left; text-align:center; margin: 0 auto">
+                        <a href="https://generalization-taxonomy.github.io/img/STAR-GEN/results/vqa_coft.png" target="_blank">
+                            <figure>
+                                <img src="img/STAR-GEN/results/vqa_coft.png" class="img-responsive">
+                            </figure>
+                        </a>
+                        <figcaption style="text-align: left;">(c) <b>VQA co-training</b>: we investigate the impact
+                            of co-training with general visual-question answering (VQA)
+                            data, which has been suggested in prior work to improve
+                            VLA generalization. We find that VQA co-training does
+                            generally improve generalization, but surprisingly has a mixed
+                            effect for semantic axes, improving for 3 of them (Language
+                            Rephrase, Multi-Object Referencing, Internet Knowledge), but
+                            hurting another (Object Properties). This could indicate that
+                            there is room for improvement when co-training VLAs, such
+                            as by using VQA data that is targeted for inducing various
+                            forms of policy generalization, rather than general VQA data.</figcaption>
+                    </div>
+                </div>
+
+                <div style="width: 50%; float: left; text-align:center; margin: 0 auto; display: inline-block">
+                    <div style="width: 95%; float: left; text-align:center; margin: 0 auto">
+                        <a href="https://generalization-taxonomy.github.io/img/STAR-GEN/results/vq_vs_binning.png" target="_blank">
+                            <figure>
+                                <img src="img/STAR-GEN/results/vq_vs_binning.png" class="img-responsive">
+                            </figure>
+                        </a>
+                        <figcaption style="text-align: left;">(d) <b>Vector Quantized Actions</b>: 
+                            we investigate the effect of removing vector quantized action chunking
+                            (–VQ) from MiniVLA, and instead using the binning-
+                            based tokenization from OpenVLA. We find that for nearly all
+                            axes (except Interacting Scene), this change hurts generaliza-
+                            tion. This is perhaps because action chunking helps the policy
+                            resolve action uncertainty and multi-modality by committing
+                            to certain action sequences, as hypothesized in prior work</figcaption>
+                    </div>
+                </div>
+            </div>
+        </div>    
+
+        <br>
         <hr class="section-divider">
 
          <div class="row">
