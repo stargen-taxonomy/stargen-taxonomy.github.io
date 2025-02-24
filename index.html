@@ -57,7 +57,7 @@
 
   gtag('config', 'G-52J0PM8XKV');
 </script>
-	
+
     <style>
         .nav-pills {
           position: relative;
@@ -85,7 +85,7 @@
     <div class="container" id="main">
         <div class="row">
             <h2 class="col-md-12 text-center">
-                <strong><font size="+6">A Taxonomy for Evaluating Generalist Robot Policies</font></strong> </br> 
+                <strong><font size="+6">A Taxonomy for Evaluating Generalist Robot Policies</font></strong> </br>
                 <!--<small>
                     CoRL 2023
                 </small>-->
@@ -96,11 +96,11 @@
                 <ul class="list-inline">
                 <br>
                 <li>
-                    <a href="https://scholar.google.com/citations?user=SnTMyGUAAAAJ&hl=en">Jensen Gao*</a><sup>1</sup>, 
-                    <a href="https://suneel.belkhale.com/">Suneel Belkhale*</a><sup>1</sup>, 
-                    <a href="https://sudeepdasari.github.io/">Sudeep Dasari</a><sup>2</sup>, 
-                    <a href="https://abalakrishna123.github.io/">Ashwin Balakrishna</a><sup>2</sup>, 
-                    <a href="https://robodhruv.github.io/">Dhruv Shah</a><sup>2</sup>, 
+                    <a href="https://scholar.google.com/citations?user=SnTMyGUAAAAJ&hl=en">Jensen Gao*</a><sup>1</sup>,
+                    <a href="https://suneel.belkhale.com/">Suneel Belkhale*</a><sup>1</sup>,
+                    <a href="https://sudeepdasari.github.io/">Sudeep Dasari</a><sup>2</sup>,
+                    <a href="https://abalakrishna123.github.io/">Ashwin Balakrishna</a><sup>2</sup>,
+                    <a href="https://robodhruv.github.io/">Dhruv Shah</a><sup>2</sup>,
                     <a href="https://dorsa.fyi/">Dorsa Sadigh</a><sup>1,2</sup>
                 </li>
                 <br>
@@ -152,20 +152,20 @@
         </div>
         <br>
 
-        <div class="row" style="width: 80%; margin: 0 auto;"> 
+        <div class="row" style="width: 80%; margin: 0 auto;">
             <div class="col-md-12">
                 <h2>Abstract</h2>
                 <p>
-                    Machine learning for robotics promises to unlock generalization to novel tasks and environments. 
-                    Guided by this promise, many recent works have focused on scaling up robot data collection and developing larger, more expressive policies to achieve this. 
-                    But how do we measure progress towards this goal of policy generalization in practice? 
-                    Evaluating and quantifying generalization is the Wild West of modern robotics, with each work proposing and measuring different types of generalization in their own, often difficult to reproduce, settings. 
+                    Machine learning for robotics promises to unlock generalization to novel tasks and environments.
+                    Guided by this promise, many recent works have focused on scaling up robot data collection and developing larger, more expressive policies to achieve this.
+                    But how do we measure progress towards this goal of policy generalization in practice?
+                    Evaluating and quantifying generalization is the Wild West of modern robotics, with each work proposing and measuring different types of generalization in their own, often difficult to reproduce, settings.
                     In this work, our goal is (1) to outline the forms of generalization we believe are important in robot manipulation in a comprehensive and fine-grained manner, and (2) to provide reproducible guidelines for measuring these notions of generalization.
-                    We first propose ★-Gen, a taxonomy of generalization for robot manipulation structured around semantic, visual, and behavioral generalization. 
-                    We discuss how our taxonomy encompasses most prior notions of generalization in robotics. 
-                    Next, we instantiate ★-Gen with a concrete real-world benchmark based on the widely-used Bridge V2 dataset. 
-                    We evaluate a variety of state-of-the-art models on this benchmark to demonstrate the utility of our taxonomy in practice. 
-                    Our taxonomy of generalization can yield many interesting insights into existing models: for example, we observe that current vision-language-action models struggle with various types of semantic generalization, despite the promise of pre-training on internet-scale language datasets. 
+                    We first propose ★-Gen, a taxonomy of generalization for robot manipulation structured around semantic, visual, and behavioral generalization.
+                    We discuss how our taxonomy encompasses most prior notions of generalization in robotics.
+                    Next, we instantiate ★-Gen with a concrete real-world benchmark based on the widely-used Bridge V2 dataset.
+                    We evaluate a variety of state-of-the-art models on this benchmark to demonstrate the utility of our taxonomy in practice.
+                    Our taxonomy of generalization can yield many interesting insights into existing models: for example, we observe that current vision-language-action models struggle with various types of semantic generalization, despite the promise of pre-training on internet-scale language datasets.
                     We believe ★-Gen and our guidelines can improve the dissemination and evaluation of progress towards generalization in robotics, which we hope will guide model design and future data collection efforts.
                 </p>
             </div>
@@ -189,9 +189,9 @@
 
                 <h2>Our Taxonomy: ★-Gen</h2>
                 <br>
-        
+
                 <p>
-                    Generalization can be a nebulous, ill-defined concept. We formalize generalization intuitively as <b>perturbations</b> relative to some base task. 
+                    Generalization can be a nebulous, ill-defined concept. We formalize generalization intuitively as <b>perturbations</b> relative to some base task.
                     For vision-language-action models (VLAs), these perturbations can fall under three main types:
                     <li><b>Visual</b>: Changes to the initial image.</li>
                     <li><b>Semantic</b>: Changes to the task.</li>
@@ -204,7 +204,7 @@
                 <p>
                     Therefore we can categorize perturbations into <b>categories</b> of generalization depending on which combination of the above perturbation types they affect.
                     For example, changing the location of the carrot would fall under the Visual + Behavioral category.
-                    We further group different perturbations in each category into human-interpretable <b>Axes</b> of generalization. Below you can find the axes we have enumerated for each category of generalization.
+                    We further group different perturbations in each category into human-interpretable <b>axes</b> of generalization. Below you can find the axes we have enumerated for each category of generalization.
                 </p>
 
                 <div style="width: 90%; float: center; text-align:center; margin: 0 auto">
@@ -245,7 +245,7 @@
                 <p>
                     We walk through an example of instantiating our taxonomy ★-Gen into a real-world benchmark for generalization evaluation.
                     We use the popular Bridge-V2 dataset as a starting point, and we train several state of the art models on our starting data:
-                    OpenVLA, MiniVLA, and \( \pi_0 \). We pick the following base tasks which are aligned with the Bridge-V2 dataset, 
+                    OpenVLA, MiniVLA, and \( \pi_0 \). We pick the following base tasks which are aligned with the Bridge-V2 dataset,
                     and we collect 20-50 additional demos to ensure they are in distribution for our setup.
                 </p>
 
@@ -332,7 +332,7 @@
                     across our different axes. However, there are some notable
                     differences between each model that the fine-grained nature
                     of our benchmark helps reveal. For example, OpenVLA is
-                    noticeably worse at visual generalization than the other models, 
+                    noticeably worse at visual generalization than the other models,
                     while MiniVLA struggles more with forms of visual
                     + behavioral generalization. OpenVLA performs the best
                     at understanding object properties which could be due to
@@ -346,7 +346,7 @@
                 </p>
                 </div>
             </div>
-            
+
         </div>
 
         <br>
@@ -365,7 +365,7 @@
                             important to note that OXE is a significantly larger dataset that
                             contains Bridge V2, along with data from over 20 other robot
                             embodiments. Consistent with prior work, we find that
-                            larger and more diverse robot datasets can significantly improve 
+                            larger and more diverse robot datasets can significantly improve
                             overall generalization. However, we observe that while
                             generalization improves along several axes (especially some
                             semantic and visual axes), those that the Bridge-only model
@@ -390,7 +390,7 @@
                             version of MiniVLA does not use vector quantized action
                             chunking (designated as –VQ), and the only major difference
                             between these two models is their LLM backbone. We find that
-                            the larger LLM backbone does improve semantic generalization, 
+                            the larger LLM backbone does improve semantic generalization,
                             which makes intuitive sense. However, there still remain
                             large deficiencies in terms of absolute performance for these
                             axes, and there is much less effect on the others, suggesting
@@ -427,7 +427,7 @@
                                 <img src="img/STAR-GEN/results/vq_vs_binning.png" class="img-responsive">
                             </figure>
                         </a>
-                        <figcaption style="text-align: left;">(d) <b>Vector Quantized Actions</b>: 
+                        <figcaption style="text-align: left;">(d) <b>Vector Quantized Actions</b>:
                             we investigate the effect of removing vector quantized action chunking
                             (–VQ) from MiniVLA, and instead using the binning-
                             based tokenization from OpenVLA. We find that for nearly all
@@ -438,7 +438,26 @@
                     </div>
                 </div>
             </div>
-        </div>    
+        </div>
+
+        <br>
+        <hr class="section-divider">
+
+        <h2>Generate Your Own ★-Gen Conditions</h2>
+        <br>
+
+        <p>
+            Here we provide a demo of using Gemini 2.0 Flash to automatically generate evaluation conditions for a base task according to ★-Gen.
+            First, provide a Gemini API key, which can be generated <a href="https://aistudio.google.com/u/1/apikey">here</a> (this will only be stored locally).
+            Then, provide a base task by uploading a scene image (under 1 MB) and providing a language instruction.
+            You may then choose an axis from ★-Gen from one of the options in the drop-down menu, and Gemini will suggest new perturbed tasks (as text) for evaluating the chosen axis.
+            <br>
+            <b>Disclaimer</b>: The generated perturbations are not guaranteed to accurately reflect the chosen axis.
+        </p>
+
+        <div id="react-widget"></div>
+        <!-- Include React JavaScript from react-widget folder -->
+        <script src="react-widget/assets/index-C4s6VJKU.js"></script>
 
         <br>
         <hr class="section-divider">
@@ -446,7 +465,7 @@
          <div class="row">
             <div class="col-md-12">
                 <h3>
-                    Citation 
+                    Citation
                 </h3>
                 <div class="form-group col-md-10 col-md-offset-1">
                     <div class="form-group col-md-10 col-md-offset-1">
@@ -460,7 +479,7 @@
                 </div>
                 </div>
             </div>
-             
+
         </div>
 
 
