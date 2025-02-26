@@ -101,7 +101,7 @@
                     <a href="https://sudeepdasari.github.io/">Sudeep Dasari</a><sup>2</sup>,
                     <a href="https://abalakrishna123.github.io/">Ashwin Balakrishna</a><sup>2</sup>,
                     <a href="https://robodhruv.github.io/">Dhruv Shah</a><sup>2</sup>,
-                    <a href="https://dorsa.fyi/">Dorsa Sadigh</a><sup>1,2</sup>
+                    <a href="https://dorsa.fyi/">Dorsa Sadigh</a><sup>1</sup>
                 </li>
                 <br>
                 </ul>
@@ -446,44 +446,154 @@
         <h2>Example Generalization Conditions</h2>
         <br>
 
-        <div class="slideshow-container">
+        <div class="full-slider-container">
 
             <!-- BASE -->
-            <div class="video-container" style="text-align: center;">
-                <video width="60%" controls>
+            <div class="video-container base-task" style="text-align: center; display:inline; float:left; width: 48%;">
+                <video width="85%" controls loop autoplay muted>
                     <source src="videos/carrot/carrot_base.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
-                <p >Put carrot on plate <b>[BASE]</b></p>
+                <p><b>BASE TASK</b>: Put carrot on plate</p>
             </div>
 
-            <!-- CAMERA -->
-            <div class="video-container" style="text-align: center;">
-                <video width="60%" controls>
-                    <source src="videos/carrot/carrot_camera.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
-                <p >Put carrot on plate + new camera angle <b>[V-VIEW]</b></p>
+            <div class="slideshow-container" style="width: 48%; display: inline-block; float: right;">
+
+
+                <!-- DISTRACTORS -->
+                <div class="video-container slide-index-0" style="text-align: center;">
+                    <video width="85%" controls loop autoplay muted>
+                        <source src="videos/carrot/carrot_distractors.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <p><b>V-SC</b>: <i>distractors</i></p>
+                </div>
+
+                <!-- VISUAL SCENE -->
+                <div class="video-container slide-index-0" style="text-align: center;">
+                    <video width="85%" controls loop autoplay muted>
+                        <source src="videos/carrot/carrot_orange_plate.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <p><b>V-OBJ</b>: <i>orange plate</i></p>
+                </div>
+
+                <!--VISUAL VIEW -->
+                <div class="video-container slide-index-0" style="text-align: center;">
+                    <video width="85%" controls loop autoplay muted>
+                        <source src="videos/carrot/carrot_camera.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <p><b>V-VIEW</b>: <i>new camera view</i></p>
+                </div>
+
+                <!-- SEMANTIC OBJECT PROP -->
+                <div class="video-container slide-index-0" style="text-align: center;">
+                    <video width="85%" controls loop autoplay muted style="opacity: 0.6;">
+                        <source src="videos/carrot/carrot_base.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <p><b>S-PROP</b>: Put the orange object on the plate</p>
+                </div>
+
+                <!-- SEMANTIC LANG REPHRASE -->
+                <div class="video-container slide-index-0" style="text-align: center;">
+                    <video width="85%" controls loop autoplay muted style="opacity: 0.6;">
+                        <source src="videos/carrot/carrot_base.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <p><b>S-LANG</b>: Lift carrot and place on plate</p>
+                </div>
+
+                <!-- SEMANTIC MULTI OBJ REFERING -->
+                <div class="video-container slide-index-0" style="text-align: center;">
+                    <video width="85%" controls loop autoplay muted style="opacity: 0.6;">
+                        <source src="videos/carrot/carrot_base.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <p><b>S-MO</b>: Put the object that is on the counter on the plate</p>
+                </div>
+
+                <!-- SEMANTIC INTERNET -->
+                <div class="video-container slide-index-0" style="text-align: center;">
+                    <video width="85%" controls loop autoplay muted style="opacity: 0.6;">
+                        <source src="videos/carrot/carrot_base.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <p><b>S-INT</b>: Put the object that is the same color as a basketball on the plate</p>
+                </div>
+
+                <!-- VISUAL+BEHAVIORAL POSE -->
+                <div class="video-container slide-index-0" style="text-align: center;">
+                    <video width="85%" controls loop autoplay muted>
+                        <source src="videos/carrot/carrot_farther.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <p><b>VB-POSE</b>: <i>carrot farther away</i></p>
+                </div>
+
+                <!-- VISUAL+BEHAVIORAL SCENE ELEMENTS -->
+                <div class="video-container slide-index-0" style="text-align: center;">
+                    <video width="85%" controls loop autoplay muted>
+                        <source src="videos/carrot/carrot_shorter_table.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <p><b>VB-ISC</b>: <i>shorter table height</i></p>
+                </div>
+
+
+                <!-- VISUAL+BEHAVIORAL OBJECT MORPH -->
+                <div class="video-container slide-index-0" style="text-align: center;">
+                    <video width="85%" controls loop autoplay muted>
+                        <source src="videos/carrot/baby_carrot.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <p><b>VB-MOBJ</b>: <i>baby carrot</i></p>
+                </div>
+
+                <!-- SEMANTIC+BEHAVIORAL SPATIAL MULTI OBJECT -->
+                <div class="video-container slide-index-0" style="text-align: center;">
+                    <video width="85%" controls loop autoplay muted>
+                        <source src="videos/carrot/put_carrot_in_sink.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <p><b>SB-SMO</b>: Put carrot in sink</p>
+                </div>
+
+                <!-- VISUAL+SEMANTIC+BEHAVIORAL NEW OBJECT -->
+                <div class="video-container slide-index-0" style="text-align: center;">
+                    <video width="85%" controls loop autoplay muted>
+                        <source src="videos/carrot/ball.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <p><b>VSB-NOBJ</b>: Put ball on plate</p>
+                </div>
+
+                <div>
+                    <!-- Next and previous buttons -->
+                    <a class="prev" onclick="plusSlides(-1, idx=0)">&#10094;</a>
+                    <a class="next" onclick="plusSlides(1, idx=0)">&#10095;</a>
+                </div>
             </div>
 
-            <!-- DISTRACTORS -->
-            <div class="video-container" style="text-align: center;">
-                <video width="60%" controls>
-                    <source src="videos/carrot/carrot_distractors.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
-                <p >Put carrot on plate + distractors <b>[V-SC]</b></p>
-            </div>
-
-            <!-- Next and previous buttons -->
-            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-            <a class="next" onclick="plusSlides(1)">&#10095;</a>
         </div>
 
-        <div style="text-align:center">
-            <span class="dot" onclick="currentSlide(1)"></span>
-            <span class="dot" onclick="currentSlide(2)"></span>
-            <span class="dot" onclick="currentSlide(3)"></span>
+        <br>
+
+        <div style="text-align: center; display: block;">
+            <span class="vis dot slide-index-0" onclick="currentSlide(1, idx=0)">SC</span>
+            <span class="vis dot slide-index-0" onclick="currentSlide(2, idx=0)">OBJ</span>
+            <span class="vis dot slide-index-0" onclick="currentSlide(3, idx=0)">VIEW</span>
+            <span class="sem dot slide-index-0" onclick="currentSlide(4, idx=0)">PROP</span>
+            <span class="sem dot slide-index-0" onclick="currentSlide(5, idx=0)">LANG</span>
+            <span class="sem dot slide-index-0" onclick="currentSlide(6, idx=0)">MO</span>
+            <span class="sem dot slide-index-0" onclick="currentSlide(7, idx=0)">INT</span>
+            <span class="vb dot slide-index-0" onclick="currentSlide(8, idx=0)">POSE</span>
+            <span class="vb dot slide-index-0" onclick="currentSlide(9, idx=0)">ISC</span>
+            <span class="vb dot slide-index-0" onclick="currentSlide(10, idx=0)">MOBJ</span>
+            <span class="sb dot slide-index-0" onclick="currentSlide(11, idx=0)">SMO</span>
+            <!-- <span class="sb dot slide-index-0" onclick="currentSlide(13, idx=0)">VRB</span> -->
+            <span class="vsb dot slide-index-0" onclick="currentSlide(12, idx=0)">NOBJ</span>
         </div>
 
         <br>

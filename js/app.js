@@ -1,30 +1,32 @@
 // Next/previous controls
-function plusSlides(n) {
-showSlides(slideIndex += n);
+function plusSlides(n, idx=0) {
+    slideIndex[idx] += n;
+    showSlides(slideIndex[idx], idx=idx);
 }
 
 // Thumbnail image controls
-function currentSlide(n) {
-showSlides(slideIndex = n);
+function currentSlide(n, idx=0) {
+    slideIndex[idx] = n;
+    showSlides(slideIndex[idx], idx=idx);
 }
 
-function showSlides(n) {
+function showSlides(n, idx=0) {
 let i;
-let slides = document.getElementsByClassName("video-container");
-let dots = document.getElementsByClassName("dot");
-if (n > slides.length) {slideIndex = 1}
-if (n < 1) {slideIndex = slides.length}
+let slides = document.getElementsByClassName(`video-container slide-index-${idx}`);
+let dots = document.getElementsByClassName(`dot slide-index-${idx}`);
+if (n > slides.length) {slideIndex[idx] = 1}
+if (n < 1) {slideIndex[idx] = slides.length}
 for (i = 0; i < slides.length; i++) {
     slides[i].style.display = "none";
 }
 for (i = 0; i < dots.length; i++) {
     dots[i].className = dots[i].className.replace(" active", "");
 }
-slides[slideIndex-1].style.display = "block";
-dots[slideIndex-1].className += " active";
+slides[slideIndex[idx]-1].style.display = "block";
+dots[slideIndex[idx]-1].className += " active";
 }
 
-let slideIndex = 1;
+const slideIndex = [1, 1, 1, 1];
 
 $(document).ready(function() {
     var editor = CodeMirror.fromTextArea(document.getElementById("bibtex"), {
@@ -65,6 +67,8 @@ $(document).ready(function() {
     
 //     window.requestAnimationFrame(scrollPlay);
 
-  showSlides(slideIndex);
-  
+for (let index = 0; index < slideIndex.length; index++) {
+    showSlides(slideIndex[index], idx=index);
+}
+
 });

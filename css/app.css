@@ -179,12 +179,27 @@ figcaption {
   text-align: center;
 }
 
+.full-slider-container{
+  width: auto;
+  height: auto;
+  overflow: auto;
+}
+
 .video-container{
-  position: relative;
+  /* position: right; */
+  /* float: left; */
   /* height: 100vh; */
   /* width: 100%; */
+  padding-top: 20px;
   overflow: hidden;
   display: none;
+}
+
+.base-task{
+  background-color: #e5e5e5;
+  border-radius: 3px;
+  padding-top: 20px;
+  margin-right: 10px;
 }
 
 .slideshow-container {
@@ -197,14 +212,16 @@ figcaption {
 .prev, .next {
   cursor: pointer;
   position: absolute;
-  top: 50%;
+  top: 40%;
+  height: auto;
   width: auto;
-  margin-top: -22px;
-  padding: 16px;
-  color: rgb(57, 56, 56);
+  margin-top: -0px;
+  padding: 4px;
+  color: rgb(255, 253, 253);
+  background-color: rgba(145, 143, 143, 0.8);
   font-weight: bold;
   font-size: 18px;
-  transition: 0.6s ease;
+  transition: 0.3s ease;
   border-radius: 3px 3px 3px 3px;
   user-select: none;
 }
@@ -222,10 +239,11 @@ figcaption {
 
 
 .active, .dot:hover {
-  background-color: #717171;
+  outline: auto;
+  outline-color: #d0cece;
 }
 
-.dot {
+/* .dot {
   cursor: pointer;
   height: 15px;
   width: 15px;
@@ -234,4 +252,38 @@ figcaption {
   border-radius: 50%;
   display: inline-block;
   transition: background-color 0.6s ease;
+} */
+
+
+.dot {
+  cursor: pointer;
+  height: auto;
+  width: auto;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin: 0px 0px;
+  background-color: #bbb;
+  border-radius: 3px 3px 3px 3px;
+  /* border-radius: 50%; */
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.vis {
+  background-color: #caebbb;
+}
+.sem{
+  background-color: #ffdeca;
+}
+.beh{
+  background-color: #cce6ff;
+}
+.vb{
+  background-color: #d3ffee;
+}
+.sb{
+  background-color: #efdeff;
+}
+.vsb{
+  background-color: #e5e5e5;
 }
