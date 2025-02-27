@@ -26,7 +26,23 @@ slides[slideIndex[idx]-1].style.display = "block";
 dots[slideIndex[idx]-1].className += " active";
 }
 
+function toggleInstructionVideo() {
+    instrVideoShow = !instrVideoShow;
+
+    let instrs = document.getElementsByClassName("instructional-video")
+    for (let i = 0; i < instrs.length; i++) {
+       instrs[i].style.display = instrVideoShow ? "unset" : "none";
+    }
+
+    let open_button = document.getElementById("open-video")
+    let close_button = document.getElementById("close-video")
+
+    open_button.style.display = instrVideoShow ? "none" : "unset"
+    close_button.style.display = instrVideoShow ? "unset" : "none"
+}
+
 const slideIndex = [1, 1, 1, 1];
+let instrVideoShow = false;
 
 $(document).ready(function() {
     var editor = CodeMirror.fromTextArea(document.getElementById("bibtex"), {
@@ -72,7 +88,9 @@ let videos = document.getElementsByTagName("video");
 // make all videos 2x
 for (let index = 0; index < videos.length; index++) {
     const video = videos[index];
-    video.playbackRate = 2.0;   
+    if ("normal-speed" != video.className) {
+        video.playbackRate = 2.0;   
+    }
 }
 
 for (let index = 0; index < slideIndex.length; index++) {

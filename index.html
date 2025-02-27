@@ -1077,6 +1077,18 @@
             <b>Disclaimer</b>: The generated perturbations are not guaranteed to accurately reflect the chosen axis.
         </p>
 
+        <p>
+            <b><u>Instructional Video</u></b>: <a onclick="toggleInstructionVideo()">click to <span id="open-video">open</span><span id="close-video" style="display: none;">close</span></a>
+        </p>
+        
+        <div class="instructional-video" style="text-align: center; display: none;">
+            <video class="normal-speed" width="100%" controls loop autoplay muted>
+                <source src="videos/instructions_gen_demo_blurred.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <p>Use the interface below to create your own generalization conditions!</p>
+        </div>
+
         <div id="react-widget"></div>
         <!-- Include React JavaScript from react-widget folder -->
         <script src="react-widget/assets/index-C4s6VJKU.js"></script>
