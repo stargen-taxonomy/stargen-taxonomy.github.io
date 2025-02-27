@@ -443,9 +443,14 @@
         <br>
         <hr class="section-divider">
 
-        <h2>Example Generalization Conditions</h2>
+        <h2>Example Generalization Axes & Evals </h2>
         <br>
+        <p>Below we visualize rollouts from the policy under each of our axes of generalization tested in our benchmark BridgeV2-★.
+            For each row, the left video shows the base task, and the right slider (and color-coded scroll buttons below the videos) shows an example generalization condition for that axis.
+            These videos are real rollouts from MiniVLA.
+        </p>
 
+        <!-- CARROT -->
         <div class="full-slider-container">
 
             <!-- BASE -->
@@ -594,6 +599,467 @@
             <span class="sb dot slide-index-0" onclick="currentSlide(11, idx=0)">SMO</span>
             <!-- <span class="sb dot slide-index-0" onclick="currentSlide(13, idx=0)">VRB</span> -->
             <span class="vsb dot slide-index-0" onclick="currentSlide(12, idx=0)">NOBJ</span>
+        </div>
+
+        <br>
+        <hr class="section-divider">
+
+        <!-- KNIFE -->
+        <div class="full-slider-container">
+
+            <!-- BASE -->
+            <div class="video-container base-task" style="text-align: center; display:inline; float:left; width: 48%;">
+                <video width="85%" controls loop autoplay muted>
+                    <source src="videos/knife/knife_base.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <p><b>BASE TASK</b>: Put knife on plate</p>
+            </div>
+
+            <div class="slideshow-container" style="width: 48%; display: inline-block; float: right;">
+
+
+                <!-- DISTRACTORS -->
+                <div class="video-container slide-index-1" style="text-align: center;">
+                    <video width="85%" controls loop autoplay muted>
+                        <source src="videos/knife/knife_distractors.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <p><b>V-SC</b>: <i>distractors</i></p>
+                </div>
+
+                <!-- VISUAL SCENE -->
+                <div class="video-container slide-index-1" style="text-align: center;">
+                    <video width="85%" controls loop autoplay muted>
+                        <source src="videos/knife/knife_orange_plate.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <p><b>V-OBJ</b>: <i>orange plate</i></p>
+                </div>
+
+                <!--VISUAL VIEW -->
+                <div class="video-container slide-index-1" style="text-align: center;">
+                    <video width="85%" controls loop autoplay muted>
+                        <source src="videos/knife/knife_camera.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <p><b>V-VIEW</b>: <i>new camera view</i></p>
+                </div>
+
+                <!-- SEMANTIC OBJECT PROP -->
+                <div class="video-container slide-index-1" style="text-align: center;">
+                    <video width="85%" controls loop autoplay muted style="opacity: 0.6;">
+                        <source src="videos/knife/knife_base.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <p><b>S-PROP</b>: Put the gray and green object on the plate</p>
+                </div>
+
+                <!-- SEMANTIC LANG REPHRASE -->
+                <div class="video-container slide-index-1" style="text-align: center;">
+                    <video width="85%" controls loop autoplay muted style="opacity: 0.6;">
+                        <source src="videos/knife/knife_base.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <p><b>S-LANG</b>: Lift knife and place on plate</p>
+                </div>
+
+                <!-- SEMANTIC MULTI OBJ REFERING -->
+                <div class="video-container slide-index-1" style="text-align: center;">
+                    <video width="85%" controls loop autoplay muted style="opacity: 0.6;">
+                        <source src="videos/knife/knife_base.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <p><b>S-MO</b>: Put the object that is in the sink on the plate</p>
+                </div>
+
+                <!-- SEMANTIC INTERNET -->
+                <div class="video-container slide-index-1" style="text-align: center;">
+                    <video width="85%" controls loop autoplay muted style="opacity: 0.6;">
+                        <source src="videos/knife/knife_base.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <p><b>S-INT</b>: Put the knif on the plate <i>(typo)</i></p>
+                </div>
+
+                <!-- VISUAL+BEHAVIORAL POSE -->
+                <div class="video-container slide-index-1" style="text-align: center;">
+                    <video width="85%" controls loop autoplay muted>
+                        <source src="videos/knife/knife_right.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <p><b>VB-POSE</b>: <i>knife to the right</i></p>
+                </div>
+
+                <!-- VISUAL+BEHAVIORAL SCENE ELEMENTS -->
+                <div class="video-container slide-index-1" style="text-align: center;">
+                    <video width="85%" controls loop autoplay muted>
+                        <source src="videos/knife/knife_shorter_table.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <p><b>VB-ISC</b>: <i>shorter table height</i></p>
+                </div>
+
+
+                <!-- VISUAL+BEHAVIORAL OBJECT MORPH -->
+                <div class="video-container slide-index-1" style="text-align: center;">
+                    <video width="85%" controls loop autoplay muted>
+                        <source src="videos/knife/small_knife.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <p><b>VB-MOBJ</b>: <i>smaller knife</i></p>
+                </div>
+
+                <!-- SEMANTIC+BEHAVIORAL NEW VERB  -->
+                <div class="video-container slide-index-1" style="text-align: center;">
+                    <video width="85%" controls loop autoplay muted>
+                        <source src="videos/knife/rotate_knife.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <p><b>SB-VRB</b>: Rotate knife clockwise</p>
+                </div>
+
+                <!-- VISUAL+SEMANTIC+BEHAVIORAL NEW OBJECT -->
+                <div class="video-container slide-index-1" style="text-align: center;">
+                    <video width="85%" controls loop autoplay muted>
+                        <source src="videos/knife/pizza.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <p><b>VSB-NOBJ</b>: Put pizza on plate</p>
+                </div>
+
+                <div>
+                    <!-- Next and previous buttons -->
+                    <a class="prev" onclick="plusSlides(-1, idx=1)">&#10094;</a>
+                    <a class="next" onclick="plusSlides(1, idx=1)">&#10095;</a>
+                </div>
+            </div>
+
+        </div>
+
+        <br>
+
+        <div style="text-align: center; display: block;">
+            <span class="vis dot slide-index-1" onclick="currentSlide(1, idx=1)">SC</span>
+            <span class="vis dot slide-index-1" onclick="currentSlide(2, idx=1)">OBJ</span>
+            <span class="vis dot slide-index-1" onclick="currentSlide(3, idx=1)">VIEW</span>
+            <span class="sem dot slide-index-1" onclick="currentSlide(4, idx=1)">PROP</span>
+            <span class="sem dot slide-index-1" onclick="currentSlide(5, idx=1)">LANG</span>
+            <span class="sem dot slide-index-1" onclick="currentSlide(6, idx=1)">MO</span>
+            <span class="sem dot slide-index-1" onclick="currentSlide(7, idx=1)">INT</span>
+            <span class="vb dot slide-index-1" onclick="currentSlide(8, idx=1)">POSE</span>
+            <span class="vb dot slide-index-1" onclick="currentSlide(9, idx=1)">ISC</span>
+            <span class="vb dot slide-index-1" onclick="currentSlide(10, idx=1)">MOBJ</span>
+            <!-- <span class="sb dot slide-index-1" onclick="currentSlide(11, idx=1)">SMO</span> -->
+            <span class="sb dot slide-index-1" onclick="currentSlide(11, idx=1)">VRB</span>
+            <span class="vsb dot slide-index-1" onclick="currentSlide(12, idx=1)">NOBJ</span>
+        </div>
+
+        <br>
+        <hr class="section-divider">
+
+        <!-- POT -->
+        <div class="full-slider-container">
+
+            <!-- BASE -->
+            <div class="video-container base-task" style="text-align: center; display:inline; float:left; width: 48%;">
+                <video width="85%" controls loop autoplay muted>
+                    <source src="videos/pot/pot_base.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <p><b>BASE TASK</b>: Flip pot upright which is in sink</p>
+            </div>
+
+            <div class="slideshow-container" style="width: 48%; display: inline-block; float: right;">
+
+
+                <!-- DISTRACTORS -->
+                <div class="video-container slide-index-2" style="text-align: center;">
+                    <video width="85%" controls loop autoplay muted>
+                        <source src="videos/pot/pot_distractors.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <p><b>V-SC</b>: <i>distractors</i></p>
+                </div>
+
+                <!-- VISUAL SCENE -->
+                <div class="video-container slide-index-2" style="text-align: center;">
+                    <video width="85%" controls loop autoplay muted>
+                        <source src="videos/pot/pot_green_sink.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <p><b>V-SC</b>: <i>green sink</i></p>
+                </div>
+
+                <!--VISUAL VIEW -->
+                <div class="video-container slide-index-2" style="text-align: center;">
+                    <video width="85%" controls loop autoplay muted>
+                        <source src="videos/pot/pot_camera.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <p><b>V-VIEW</b>: <i>new camera view</i></p>
+                </div>
+
+                <!-- SEMANTIC OBJECT PROP -->
+                <div class="video-container slide-index-2" style="text-align: center;">
+                    <video width="85%" controls loop autoplay muted style="opacity: 0.6;">
+                        <source src="videos/pot/pot_base.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <p><b>S-PROP</b>: Flip the gray object upright which is in sink</p>
+                </div>
+
+                <!-- SEMANTIC LANG REPHRASE -->
+                <div class="video-container slide-index-2" style="text-align: center;">
+                    <video width="85%" controls loop autoplay muted style="opacity: 0.6;">
+                        <source src="videos/pot/pot_base.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <p><b>S-LANG</b>: Lift pot upright and place in sink</p>
+                </div>
+
+                <!-- SEMANTIC MULTI OBJ REFERING -->
+                <div class="video-container slide-index-2" style="text-align: center;">
+                    <video width="85%" controls loop autoplay muted style="opacity: 0.6;">
+                        <source src="videos/pot/pot_base.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <p><b>S-MO</b>: Flip the object that is in the sink upright</p>
+                </div>
+
+                <!-- SEMANTIC INTERNET -->
+                <div class="video-container slide-index-2" style="text-align: center;">
+                    <video width="85%" controls loop autoplay muted style="opacity: 0.6;">
+                        <source src="videos/pot/pot_base.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <p><b>S-INT</b>: Flip the object that can be used for boiling water upright</p>
+                </div>
+
+                <!-- VISUAL+BEHAVIORAL POSE -->
+                <div class="video-container slide-index-2" style="text-align: center;">
+                    <video width="85%" controls loop autoplay muted>
+                        <source src="videos/pot/pot_angled.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <p><b>VB-POSE</b>: <i>pot angled</i></p>
+                </div>
+
+                <!-- VISUAL+BEHAVIORAL SCENE ELEMENTS -->
+                <div class="video-container slide-index-2" style="text-align: center;">
+                    <video width="85%" controls loop autoplay muted>
+                        <source src="videos/pot/pot_shorter_table.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <p><b>VB-ISC</b>: <i>shorter table height</i></p>
+                </div>
+
+
+                <!-- VISUAL+BEHAVIORAL OBJECT MORPH -->
+                <div class="video-container slide-index-2" style="text-align: center;">
+                    <video width="85%" controls loop autoplay muted>
+                        <source src="videos/pot/thin_pot.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <p><b>VB-MOBJ</b>: <i>smaller pot</i></p>
+                </div>
+
+                <!-- SEMANTIC+BEHAVIORAL NEW VERB  -->
+                <div class="video-container slide-index-2" style="text-align: center;">
+                    <video width="85%" controls loop autoplay muted>
+                        <source src="videos/pot/pot_to_left.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <p><b>SB-VRB</b>: Move pot to the left side of the sink</p>
+                </div>
+
+                <!-- VISUAL+SEMANTIC+BEHAVIORAL NEW OBJECT -->
+                <div class="video-container slide-index-2" style="text-align: center;">
+                    <video width="85%" controls loop autoplay muted>
+                        <source src="videos/pot/cup.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <p><b>VSB-NOBJ</b>: Flip cup upright which is in sink</p>
+                </div>
+
+                <div>
+                    <!-- Next and previous buttons -->
+                    <a class="prev" onclick="plusSlides(-1, idx=2)">&#10094;</a>
+                    <a class="next" onclick="plusSlides(1, idx=2)">&#10095;</a>
+                </div>
+            </div>
+
+        </div>
+
+        <br>
+
+        <div style="text-align: center; display: block;">
+            <span class="vis dot slide-index-2" onclick="currentSlide(1, idx=2)">SC</span>
+            <span class="vis dot slide-index-2" onclick="currentSlide(2, idx=2)">SC(2)</span>
+            <span class="vis dot slide-index-2" onclick="currentSlide(3, idx=2)">VIEW</span>
+            <span class="sem dot slide-index-2" onclick="currentSlide(4, idx=2)">PROP</span>
+            <span class="sem dot slide-index-2" onclick="currentSlide(5, idx=2)">LANG</span>
+            <span class="sem dot slide-index-2" onclick="currentSlide(6, idx=2)">MO</span>
+            <span class="sem dot slide-index-2" onclick="currentSlide(7, idx=2)">INT</span>
+            <span class="vb dot slide-index-2" onclick="currentSlide(8, idx=2)">POSE</span>
+            <span class="vb dot slide-index-2" onclick="currentSlide(9, idx=2)">ISC</span>
+            <span class="vb dot slide-index-2" onclick="currentSlide(10, idx=2)">MOBJ</span>
+            <!-- <span class="sb dot slide-index-2" onclick="currentSlide(11, idx=2)">SMO</span> -->
+            <span class="sb dot slide-index-2" onclick="currentSlide(11, idx=2)">VRB</span>
+            <span class="vsb dot slide-index-2" onclick="currentSlide(12, idx=2)">NOBJ</span>
+        </div>
+
+        <br>
+        <hr class="section-divider">
+
+        <!-- plate -->
+        <div class="full-slider-container">
+
+            <!-- BASE -->
+            <div class="video-container base-task" style="text-align: center; display:inline; float:left; width: 48%;">
+                <video width="85%" controls loop autoplay muted>
+                    <source src="videos/plate/plate_base.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <p><b>BASE TASK</b>: Put plate in sink</p>
+            </div>
+
+            <div class="slideshow-container" style="width: 48%; display: inline-block; float: right;">
+
+
+                <!-- DISTRACTORS -->
+                <div class="video-container slide-index-3" style="text-align: center;">
+                    <video width="85%" controls loop autoplay muted>
+                        <source src="videos/plate/plate_distractors.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <p><b>V-SC</b>: <i>distractors</i></p>
+                </div>
+
+                <!-- VISUAL SCENE -->
+                <div class="video-container slide-index-3" style="text-align: center;">
+                    <video width="85%" controls loop autoplay muted>
+                        <source src="videos/plate/gray_plate.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <p><b>V-OBJ</b>: <i>gray plate</i></p>
+                </div>
+
+                <!--VISUAL VIEW -->
+                <!-- <div class="video-container slide-index-3" style="text-align: center;">
+                    <video width="85%" controls loop autoplay muted>
+                        <source src="videos/plate/plate_camera.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <p><b>V-VIEW</b>: <i>new camera view</i></p>
+                </div> -->
+
+                <!-- SEMANTIC OBJECT PROP -->
+                <div class="video-container slide-index-3" style="text-align: center;">
+                    <video width="85%" controls loop autoplay muted style="opacity: 0.6;">
+                        <source src="videos/plate/plate_base.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <p><b>S-PROP</b>: Put the pink object in the sink</p>
+                </div>
+
+                <!-- SEMANTIC LANG REPHRASE -->
+                <div class="video-container slide-index-3" style="text-align: center;">
+                    <video width="85%" controls loop autoplay muted style="opacity: 0.6;">
+                        <source src="videos/plate/plate_base.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <p><b>S-LANG</b>: Lift plate and place in sink</p>
+                </div>
+
+                <!-- SEMANTIC MULTI OBJ REFERING -->
+                <div class="video-container slide-index-3" style="text-align: center;">
+                    <video width="85%" controls loop autoplay muted style="opacity: 0.6;">
+                        <source src="videos/plate/plate_base.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <p><b>S-MO</b>: Put the object that is in the drying rack in the sink</p>
+                </div>
+
+                <!-- SEMANTIC INTERNET -->
+                <div class="video-container slide-index-3" style="text-align: center;">
+                    <video width="85%" controls loop autoplay muted style="opacity: 0.6;">
+                        <source src="videos/plate/plate_base.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <p><b>S-INT</b>: Put plait on plate <i>(typo)</i></p>
+                </div>
+
+                <!-- VISUAL+BEHAVIORAL POSE -->
+                <div class="video-container slide-index-3" style="text-align: center;">
+                    <video width="85%" controls loop autoplay muted>
+                        <source src="videos/plate/plate_closer.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <p><b>VB-POSE</b>: <i>plate closer</i></p>
+                </div>
+
+                <!-- VISUAL+BEHAVIORAL SCENE ELEMENTS -->
+                <div class="video-container slide-index-3" style="text-align: center;">
+                    <video width="85%" controls loop autoplay muted>
+                        <source src="videos/plate/plate_shorter_table.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <p><b>VB-ISC</b>: <i>shorter table height</i></p>
+                </div>
+
+
+                <!-- VISUAL+BEHAVIORAL OBJECT MORPH -->
+                <div class="video-container slide-index-3" style="text-align: center;">
+                    <video width="85%" controls loop autoplay muted>
+                        <source src="videos/plate/red_bowl.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <p><b>VB-MOBJ</b>: <i>red bowl-like plate</i></p>
+                </div>
+
+                <!-- SEMANTIC+BEHAVIORAL NEW VERB  -->
+                <!-- <div class="video-container slide-index-3" style="text-align: center;">
+                    <video width="85%" controls loop autoplay muted>
+                        <source src="videos/plate/plate_to_counter.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <p><b>SB-SMO</b>: Put plate on counter</p>
+                </div> -->
+
+                <!-- VISUAL+SEMANTIC+BEHAVIORAL NEW OBJECT -->
+                <!-- <div class="video-container slide-index-3" style="text-align: center;">
+                    <video width="85%" controls loop autoplay muted>
+                        <source src="videos/plate/spoon.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <p><b>VSB-NOBJ</b>: Put spoon in sink</p>
+                </div> -->
+
+                <div>
+                    <!-- Next and previous buttons -->
+                    <a class="prev" onclick="plusSlides(-1, idx=3)">&#10094;</a>
+                    <a class="next" onclick="plusSlides(1, idx=3)">&#10095;</a>
+                </div>
+            </div>
+
+        </div>
+
+        <br>
+
+        <div style="text-align: center; display: block;">
+            <span class="vis dot slide-index-3" onclick="currentSlide(1, idx=3)">SC</span>
+            <span class="vis dot slide-index-3" onclick="currentSlide(2, idx=3)">OBJ</span>
+            <!-- <span class="vis dot slide-index-3" onclick="currentSlide(3, idx=3)">VIEW</span> -->
+            <span class="sem dot slide-index-3" onclick="currentSlide(3, idx=3)">PROP</span>
+            <span class="sem dot slide-index-3" onclick="currentSlide(4, idx=3)">LANG</span>
+            <span class="sem dot slide-index-3" onclick="currentSlide(5, idx=3)">MO</span>
+            <span class="sem dot slide-index-3" onclick="currentSlide(6, idx=3)">INT</span>
+            <span class="vb dot slide-index-3" onclick="currentSlide(7, idx=3)">POSE</span>
+            <span class="vb dot slide-index-3" onclick="currentSlide(8, idx=3)">ISC</span>
+            <span class="vb dot slide-index-3" onclick="currentSlide(9, idx=3)">MOBJ</span>
+            <!-- <span class="sb dot slide-index-3" onclick="currentSlide(11, idx=3)">SMO</span> -->
+            <!-- <span class="vsb dot slide-index-3" onclick="currentSlide(12, idx=3)">NOBJ</span> -->
         </div>
 
         <br>

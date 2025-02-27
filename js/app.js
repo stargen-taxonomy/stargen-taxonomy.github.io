@@ -67,6 +67,14 @@ $(document).ready(function() {
     
 //     window.requestAnimationFrame(scrollPlay);
 
+let videos = document.getElementsByTagName("video");
+
+// make all videos 2x
+for (let index = 0; index < videos.length; index++) {
+    const video = videos[index];
+    video.playbackRate = 2.0;   
+}
+
 for (let index = 0; index < slideIndex.length; index++) {
     showSlides(slideIndex[index], idx=index);
 }
