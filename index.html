@@ -191,19 +191,19 @@
                 <br>
 
                 <p>
-                    Generalization can be a nebulous, ill-defined concept. We formalize generalization intuitively as <b>perturbations</b> relative to some base task.
-                    For vision-language-action models (VLAs), these perturbations can fall under three main types:
-                    <li><b>Visual</b>: Changes to the initial image.</li>
-                    <li><b>Semantic</b>: Changes to the task.</li>
+                    Generalization in robotics can be a nebulous, ill-defined concept. We formalize generalization intuitively as <b>perturbations</b> relative to some base task.
+                    For visual-lingual control policies, such as vision-language-action models (VLAs), these perturbations can fall under three main types:
+                    <li><b>Visual</b>: Changes to the initial scene image.</li>
+                    <li><b>Semantic</b>: Changes to the language instruction.</li>
                     <li><b>Behavioral</b>: Changes to the expert action distribution.</li>
                 </p>
                 <p>
-                    A given perturbation might lie at the intersection of one or more of these types. For example, changing the location of a carrot in a "Put the carrot on the plate" task changes both the image (Visual) and the required actions (Behavioral).
+                    A given perturbation might lie at the intersection of one or more of these types. For example, changing the location of a carrot in the task "put carrot on plate" changes both the image (<b>Visual</b>) and the required actions (<b>Behavioral</b>).
                 </p>
 
                 <p>
-                    Therefore we can categorize perturbations into <b>categories</b> of generalization depending on which combination of the above perturbation types they affect.
-                    For example, changing the location of the carrot would fall under the Visual + Behavioral category.
+                    Therefore, we can categorize perturbations into <b>categories</b> of generalization depending on which combination of the above perturbation types they affect.
+                    For example, changing the location of the carrot would fall under the <b>Visual + Behavioral</b> category.
                     We further group different perturbations in each category into human-interpretable <b>axes</b> of generalization. Below you can find the axes we have enumerated for each category of generalization.
                 </p>
 
@@ -218,7 +218,7 @@
 
                 <br>
                 <p>
-                    These axes span a wide range of possible perturbations, and we show below that ★-Gen encompasses all notions of generalization in prior work:
+                    These axes span a wide range of possible perturbations, and we show below that ★-Gen encompasses notions of generalization in prior work:
                 </p>
 
                 <div style="width: 90%; float: center; text-align:center; margin: 0 auto">
@@ -244,42 +244,46 @@
 
                 <p>
                     We walk through an example of instantiating our taxonomy ★-Gen into a real-world benchmark for generalization evaluation.
-                    We use the popular Bridge-V2 dataset as a starting point, and we train several state of the art models on our starting data:
+                    We use the popular Bridge-V2 dataset as a starting point, and we train several state of the art models:
                     OpenVLA, MiniVLA, and \( \pi_0 \). We pick the following base tasks which are aligned with the Bridge-V2 dataset,
-                    and we collect 20-50 additional demos to ensure they are in distribution for our setup.
+                    and collect 20-50 additional demos per task to ensure they are in distribution for our setup.
                 </p>
 
                 <div style="width: 100%; float: center; text-align:center; margin: 0 auto">
                     <div style="width: 25%; float: left; text-align:center; margin: 0 auto">
                         <div style="width: 90%; float: center; text-align:center; margin: 0 auto">
                             <p><i>Put carrot on plate</i></p>
-                        <figure>
-                            <img src="img/STAR-GEN/scenes/carrot-knife/base.jpg" class="img-responsive">
-                        </figure>
+                            <video width="100%" controls loop autoplay muted>
+                                <source src="videos/carrot/carrot_base.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
                         </div>
                     </div>
                     <div style="width: 25%; float: left; text-align:center; margin: 0 auto">
                         <div style="width: 90%; float: center; text-align:center; margin: 0 auto">
                             <p><i>Put knife on plate</i></p>
-                        <figure>
-                            <img src="img/STAR-GEN/scenes/carrot-knife/base.jpg" class="img-responsive">
-                        </figure>
+                            <video width="100%" controls loop autoplay muted>
+                                <source src="videos/knife/knife_base.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                    </div>
+                    <div style="width: 25%; float: left; text-align:center; margin: 0 auto">
+                        <div style="width: 90%; float: center; text-align:center; margin: 0 auto">
+                            <p><i>Flip pot upright</i></p>
+                            <video width="100%" controls loop autoplay muted>
+                                <source src="videos/pot/pot_base.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
                         </div>
                     </div>
                     <div style="width: 25%; float: left; text-align:center; margin: 0 auto">
                         <div style="width: 90%; float: center; text-align:center; margin: 0 auto">
                             <p><i>Put plate in sink</i></p>
-                        <figure>
-                            <img src="img/STAR-GEN/scenes/pot-plate/base.jpg" class="img-responsive">
-                        </figure>
-                        </div>
-                    </div>
-                    <div style="width: 25%; float: left; text-align:center; margin: 0 auto">
-                        <div style="width: 90%; float: center; text-align:center; margin: 0 auto">
-                            <p><i>Flip pot upright in sink</i></p>
-                        <figure>
-                            <img src="img/STAR-GEN/scenes/pot-plate/base.jpg" class="img-responsive">
-                        </figure>
+                            <video width="100%" controls loop autoplay muted>
+                                <source src="videos/plate/plate_base.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
                         </div>
                     </div>
                 </div>
@@ -319,11 +323,11 @@
                     performance, and 55 task variations that span 13 of our axes,
                     for a total of <b>885 real-world evaluations</b>. We find that existing
                     generalist policies tend to struggle on most of our considered
-                    axes. In particular, semantic generalization is weak across
+                    axes. In particular, <b>semantic</b> generalization is weak across
                     all models, despite them leveraging large language model
                     backbones trained on internet-scale data. This has interesting
                     implications: e.g., rather than relying soley on improvements
-                    in language modeling to improve semantic generalization,
+                    in language modeling to improve <b>semantic</b> generalization,
                     perhaps other mechanisms are needed, such as improving
                     language annotations in robot datasets.
                 </p>
@@ -332,12 +336,12 @@
                     across our different axes. However, there are some notable
                     differences between each model that the fine-grained nature
                     of our benchmark helps reveal. For example, OpenVLA is
-                    noticeably worse at visual generalization than the other models,
-                    while MiniVLA struggles more with forms of visual
-                    + behavioral generalization. OpenVLA performs the best
+                    noticeably worse at <b>visual</b> generalization than the other models,
+                    while MiniVLA struggles more with forms of <b>visual
+                    + behavioral</b> generalization. OpenVLA performs the best
                     at understanding object properties which could be due to
                     it having the largest language model backbone, but it still
-                    struggles with other forms of semantic generalization. \( \pi_0 \)
+                    struggles with other forms of <b>semantic</b> generalization. \( \pi_0 \)
                     generally performs the best across all axes, possibly due to
                     a more capable VLM backbone (PaliGemma), and/or better
                     architecture design (flow-based action chunking). However,
@@ -353,6 +357,14 @@
 
         <div class="row">
             <div class="col-md-12">
+                <p>
+                    We also consider varying different model design decisions to better understand their impact on generalization.
+                </p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12">
 
                 <div style="width: 50%; float: left; text-align:center; margin: 0 auto; display: inline-block">
                     <div style="width: 95%; float: left; text-align:center; margin: 0 auto">
@@ -361,14 +373,13 @@
                                 <img src="img/STAR-GEN/results/bridge_vs_oxe.png" class="img-responsive">
                             </figure>
                         </a>
-                        <figcaption style="text-align: left;">(a) <b>Scaling robot data</b>: it is
-                            important to note that OXE is a significantly larger dataset that
-                            contains Bridge V2, along with data from over 20 other robot
-                            embodiments. Consistent with prior work, we find that
+                        <figcaption style="text-align: left;">(a) <b>Scaling Robot Data</b>:
+                            We compare training on Bridge V2 only to using a data mixture
+                            from Open X-Embodiment (OXE). Consistent with prior work, we find that
                             larger and more diverse robot datasets can significantly improve
-                            overall generalization. However, we observe that while
+                            overall generalization. However, while
                             generalization improves along several axes (especially some
-                            semantic and visual axes), those that the Bridge-only model
+                            <b>semantic</b> and <b>visual</b> axes), those that the Bridge-only model
                             struggled with the most (e.g., Viewpoint, Morphed Objects,
                             Multi-Object Referencing) do not improve significantly.</figcaption>
                     </div>
@@ -381,16 +392,10 @@
                                 <img src="img/STAR-GEN/results/llm_scaling.png" class="img-responsive">
                             </figure>
                         </a>
-                        <figcaption style="text-align: left;">(b) <b>Scaling LLM backbone</b>: we compare VLA
+                        <figcaption style="text-align: left;">(b) <b>Scaling LLM Backbone</b>: We compare VLA
                             policies that share the same architecture and differ only in
-                            the large language model (LLM) backbone. Specifically, we
-                            compare OpenVLA (Bridge, FT), using Llama 2 7B,
-                            and MiniVLA (Bridge, –VQ, FT), using Qwen2.5 0.5B,
-                            both using the same pre-trained vision encoder. Note that this
-                            version of MiniVLA does not use vector quantized action
-                            chunking (designated as –VQ), and the only major difference
-                            between these two models is their LLM backbone. We find that
-                            the larger LLM backbone does improve semantic generalization,
+                            the large language model (LLM) backbone. We find that
+                            the larger LLM backbone does improve <b>semantic</b> generalization,
                             which makes intuitive sense. However, there still remain
                             large deficiencies in terms of absolute performance for these
                             axes, and there is much less effect on the others, suggesting
@@ -406,12 +411,12 @@
                                 <img src="img/STAR-GEN/results/vqa_coft.png" class="img-responsive">
                             </figure>
                         </a>
-                        <figcaption style="text-align: left;">(c) <b>VQA co-training</b>: we investigate the impact
+                        <figcaption style="text-align: left;">(c) <b>VQA Co-training</b>: we investigate the impact
                             of co-training with general visual-question answering (VQA)
                             data, which has been suggested in prior work to improve
                             VLA generalization. We find that VQA co-training does
                             generally improve generalization, but surprisingly has a mixed
-                            effect for semantic axes, improving for 3 of them (Language
+                            effect for <b>semantic</b> axes, improving for 3 of them (Language
                             Rephrase, Multi-Object Referencing, Internet Knowledge), but
                             hurting another (Object Properties). This could indicate that
                             there is room for improvement when co-training VLAs, such
@@ -431,8 +436,7 @@
                             we investigate the effect of removing vector quantized action chunking
                             (–VQ) from MiniVLA, and instead using the binning-
                             based tokenization from OpenVLA. We find that for nearly all
-                            axes (except Interacting Scene), this change hurts generaliza-
-                            tion. This is perhaps because action chunking helps the policy
+                            axes (except Interacting Scene), this change hurts generalization. This is perhaps because action chunking helps the policy
                             resolve action uncertainty and multi-modality by committing
                             to certain action sequences, as hypothesized in prior work</figcaption>
                     </div>
@@ -447,7 +451,7 @@
         <br>
         <p>Below we visualize rollouts from the policy under each of our axes of generalization tested in our benchmark BridgeV2-★.
             For each row, the left video shows the base task, and the right slider (and color-coded scroll buttons below the videos) shows an example generalization condition for that axis.
-            These videos are real rollouts from MiniVLA.
+            These videos are real rollouts from our evaluation.
         </p>
 
         <!-- CARROT -->
@@ -1080,7 +1084,7 @@
         <p>
             <b><u>Instructional Video</u></b>: <a onclick="toggleInstructionVideo()">click to <span id="open-video">open</span><span id="close-video" style="display: none;">close</span></a>
         </p>
-        
+
         <div class="instructional-video" style="text-align: center; display: none;">
             <video class="normal-speed" width="100%" controls loop autoplay muted>
                 <source src="videos/instructions_gen_demo_blurred.mp4" type="video/mp4">
