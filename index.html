@@ -14,25 +14,20 @@
     <!-- <base href="/"> -->
 
         <!--FACEBOOK-->
-    <meta property="og:image" content="https://stargen-taxonomy.github.io/img/STAR-GEN/axes_v3.png">
+    <meta property="og:image" content="https://stargen-taxonomy.github.io/img/axes.png">
     <meta property="og:image:type" content="image/png">
     <meta property="og:image:width" content="682">
     <meta property="og:image:height" content="682">
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://stargen-taxonomy.github.io/"/>
-    <meta property="og:title" content="A Taxonomy for Evaluating Generalist Robot Policies" />
-    <meta property="og:description" content="Project page for A Taxonomy for Evaluating Generalist Robot Policies." />
+    <meta property="og:title" content="A Taxonomy for Evaluating Generalist Robot Manipulation Policies" />
+    <meta property="og:description" content="Project page for A Taxonomy for Evaluating Generalist Robot Manipulation Policies." />
 
         <!--TWITTER-->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="A Taxonomy for Evaluating Generalist Robot Policies" />
-    <meta name="twitter:description" content="Project page for A Taxonomy for Evaluating Generalist Robot Policies." />
+    <meta name="twitter:title" content="A Taxonomy for Evaluating Generalist Robot Manipulation Policies" />
+    <meta name="twitter:description" content="Project page for A Taxonomy for Evaluating Generalist Robot Manipulation Policies." />
     <!-- <meta name="twitter:image" content="https://rt-h.github.io/img/random_img_frames.png" /> -->
-
-
-<!--     <link rel="apple-touch-icon" href="apple-touch-icon.png"> -->
-  <!-- <link rel="icon" type="image/png" href="img/seal_icon.png"> -->
-    <!-- Place favicon.ico in the root directory -->
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
@@ -59,9 +54,9 @@
 </script>
 
     <style>
-        .nav-pills {
-          position: relative;
-          display: inline;
+        .nav-pills > li {
+          float: none;
+          display: inline-block
         }
         .imtip {
           position: absolute;
@@ -85,66 +80,53 @@
     <div class="container" id="main">
         <div class="row">
             <h2 class="col-md-12 text-center">
-                <strong><font size="+6">A Taxonomy for Evaluating Generalist Robot Policies</font></strong> </br>
-                <!--<small>
-                    CoRL 2023
-                </small>-->
+                <strong><font size="+6">A Taxonomy for Evaluating Generalist Robot Manipulation Policies</font></strong> </br>
+                <small>
+                    IEEE Robotics and Automation Letters (RA-L)
+                </small>
             </h2>
         </div>
         <div class="row">
             <div class="col-md-12 text-center authors">
                 <ul class="list-inline">
-                <br>
                 <li>
                     <a href="https://scholar.google.com/citations?user=SnTMyGUAAAAJ&hl=en">Jensen Gao*</a><sup>1</sup>,
                     <a href="https://suneel.belkhale.com/">Suneel Belkhale*</a><sup>1</sup>,
                     <a href="https://sudeepdasari.github.io/">Sudeep Dasari</a><sup>2</sup>,
                     <a href="https://abalakrishna123.github.io/">Ashwin Balakrishna</a><sup>2</sup>,
-                    <a href="https://robodhruv.github.io/">Dhruv Shah</a><sup>2</sup>,
+                    <a href="https://robodhruv.github.io/">Dhruv Shah</a><sup>2,3</sup>,
                     <a href="https://dorsa.fyi/">Dorsa Sadigh</a><sup>1</sup>
                 </li>
                 <br>
                 </ul>
-                <sup>1</sup>Stanford University, <sup>2</sup>Google DeepMind Robotics
+                <sup>1</sup>Stanford University, <sup>2</sup>Google DeepMind, <sup>3</sup>Princeton University
             </div>
             <br>
         </div>
 
         <div class="row">
             <div class="col-md-12">
-                <ul class="nav nav-pills nav-justified">
+                <ul class="nav nav-pills text-center">
                     <li>
                         <a href="https://arxiv.org/abs/2503.01238" target="_blank">
                         <image src="img/paper.png" height="60px">
                             <h4><strong>Paper</strong></h4>
                         </a>
                     </li>
-                    <!-- <li>
-                        <a href="https://console.cloud.google.com/storage/browser/gdm-robovqa" target="_blank">
-                        <image src="img/storage_icon.png" height="60px">
-                            <h4><strong>Data</strong></h4>
+                    <li>
+                        <a href="paper/appendix.pdf" target="_blank">
+                        <image src="img/clip.png" height="60px">
+                            <h4><strong>Appendix</strong></h4>
                         </a>
                     </li>
-                    <li>
-                        <a href="https://github.com/google-deepmind/robovqa/tree/main" target="_blank">
-                        <image src="img/github_icon.png" height="60px">
-                            <h4><strong>Code</strong></h4>
-                        </a>
-                    </li> -->
-                    <!-- <li>
-                        <a href="#videos">
-                        <image src="img/youtube_icon.png" height="60px">
-                            <h4><strong>Videos</strong></h4>
-                        </a>
-                    </li> -->
                 </ul>
             </div>
         </div>
 
         <div style="width: 70%; float: center; text-align:center; margin: 0 auto">
-            <a href="https://stargen-taxonomy.github.io/img/STAR-GEN/axes_v3.png" target="_blank">
+            <a href="https://stargen-taxonomy.github.io/img/axes.png" target="_blank">
                 <figure>
-                    <img src="img/STAR-GEN/axes_v3.png" class="img-responsive">
+                    <img src="img/axes.png" class="img-responsive">
                 </figure>
             </a>
             <!-- <br> -->
@@ -156,17 +138,13 @@
             <div class="col-md-12">
                 <h2>Abstract</h2>
                 <p>
-                    Machine learning for robotics promises to unlock generalization to novel tasks and environments.
-                    Guided by this promise, many recent works have focused on scaling up robot data collection and developing larger, more expressive policies to achieve this.
-                    But how do we measure progress towards this goal of policy generalization in practice?
-                    Evaluating and quantifying generalization is the Wild West of modern robotics, with each work proposing and measuring different types of generalization in their own, often difficult to reproduce, settings.
-                    In this work, our goal is (1) to outline the forms of generalization we believe are important in robot manipulation in a comprehensive and fine-grained manner, and (2) to provide reproducible guidelines for measuring these notions of generalization.
+                    Machine learning for robot manipulation promises to unlock generalization to novel tasks and environments.
+                    But how should we measure the progress of these policies towards generalization?
+                    Evaluating and quantifying generalization is the Wild West of modern robotics, with each work proposing and measuring different types of generalization in their own, often difficult to reproduce settings.
+                    In this work, our goal is (1) to outline the forms of generalization we believe are important for robot manipulation in a comprehensive and fine-grained manner, and (2) to provide reproducible guidelines for measuring these notions of generalization.
                     We first propose ★-Gen, a taxonomy of generalization for robot manipulation structured around visual, semantic, and behavioral generalization.
-                    We discuss how our taxonomy encompasses most prior notions of generalization in robotics.
-                    Next, we instantiate ★-Gen with a concrete real-world benchmark based on the widely-used Bridge V2 dataset.
-                    We evaluate a variety of state-of-the-art models on this benchmark to demonstrate the utility of our taxonomy in practice.
-                    Our taxonomy of generalization can yield many interesting insights into existing models: for example, we observe that current vision-language-action models struggle with various types of semantic generalization, despite the promise of pre-training on internet-scale language datasets.
-                    We believe ★-Gen and our guidelines can improve the dissemination and evaluation of progress towards generalization in robotics, which we hope will guide model design and future data collection efforts.
+                    Next, we instantiate ★-Gen with two case studies on real-world benchmarking: one based on open-source models and the Bridge V2 dataset, and another based on the bimanual ALOHA 2 platform that covers more dexterous and longer horizon tasks.
+                    Our case studies reveal many interesting insights: for example, we observe that open-source vision-language-action models often struggle with semantic generalization, despite pre-training on internet-scale language datasets.
                 </p>
             </div>
         </div>
@@ -176,14 +154,6 @@
         <br>
         <hr class="section-divider">
 
-        <!-- <h2>Video</h2>
-
-        <p style="text-align:center; width: 80%; margin: 0 auto">
-            <video id="bg-video" autoplay loop muted playsinline controls style="display: block; width: 100%;">
-                <source src="videos/RT-H/rt_h_video_website.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
-        </p> -->
         <div class="row">
             <div class="col-md-12">
 
@@ -206,11 +176,11 @@
                     For example, changing the location of the carrot would fall under the <b>Visual + Behavioral</b> category.
                     We further group different perturbations in each category into human-interpretable <b>axes</b> of generalization. Below you can find the axes we have enumerated for each category of generalization.
                 </p>
-
+                <br>
                 <div style="width: 70%; float: center; text-align:center; margin: 0 auto">
-                    <a href="https://stargen-taxonomy.github.io/img/STAR-GEN/detailed_axes.png" target="_blank">
+                    <a href="https://stargen-taxonomy.github.io/img/detailed_axes.png" target="_blank">
                         <figure>
-                            <img src="img/STAR-GEN/detailed_axes.png" class="img-responsive">
+                            <img src="img/detailed_axes.png" class="img-responsive">
                         </figure>
                     </a>
                     <figcaption>Detailed Axes of Generalization.</figcaption>
@@ -222,9 +192,9 @@
                 </p>
 
                 <div style="width: 80%; float: center; text-align:center; margin: 0 auto">
-                    <a href="https://stargen-taxonomy.github.io/img/STAR-GEN/comparison_table.png" target="_blank">
+                    <a href="https://stargen-taxonomy.github.io/img/comparison_table.png" target="_blank">
                         <figure>
-                            <img src="img/STAR-GEN/comparison_table.png" class="img-responsive">
+                            <img src="img/comparison_table.png" class="img-responsive">
                         </figure>
                     </a>
                     <figcaption>Comparing ★-Gen to notions of generalization in prior work, as well as our benchmark BridgeV2-★ .</figcaption>
@@ -309,43 +279,44 @@
 
                 <div style="width: 40%; float: left; text-align:center; margin: 0 auto; display: inline-block">
                     <div style="width: 95%; float: left; text-align:center; margin: 0 auto">
-                        <a href="https://stargen-taxonomy.github.io/img/STAR-GEN/results/main.png" target="_blank">
+                        <a href="https://stargen-taxonomy.github.io/paper/results/main.png" target="_blank">
                             <figure>
-                                <img src="img/STAR-GEN/results/main.png" class="img-responsive">
+                                <img src="paper/results/main.png" class="img-responsive">
                             </figure>
                         </a>
                         <figcaption>BridgeV2-★ Main results.</figcaption>
                     </div>
                 </div>
                 <div style="width: 55%; float: center; text-align:left; margin: 0 auto; display: inline-block">
+                <br>
+                <br>
+                <br>
                 <p>
                     Our main results on our BridgeV2-★ benchmark are shown on the left, which consists of in-distribution base task
                     performance, and 55 task variations that span 13 of our axes,
                     for a total of <b>885 real-world evaluations</b>. We find that existing
                     generalist policies tend to struggle on most of our considered
-                    axes. In particular, <b>semantic</b> generalization is weak across
-                    all models, despite them leveraging large language model
-                    backbones trained on internet-scale data. This has interesting
-                    implications: e.g., rather than relying soley on improvements
-                    in language modeling to improve <b>semantic</b> generalization,
+                    axes. In particular, <b>semantic</b> generalization is mostly weak,
+                    despite the use of language model backbones. This has interesting
+                    implications: e.g., rather than relying only on language model
+                    initialization to improve <b>semantic</b> generalization,
                     perhaps other mechanisms are needed, such as improving
-                    language annotations in robot datasets.
+                    robot language annotations.
                 </p>
                 <p>
-                    Each model tends to have similar strengths and weaknesses
-                    across our different axes. However, there are some notable
+                    Each model tends to have similar strengths and weaknesses.
+                    However, there are some notable
                     differences between each model that the fine-grained nature
                     of our benchmark helps reveal. For example, OpenVLA is
-                    noticeably worse at <b>visual</b> generalization than the other models,
-                    while MiniVLA struggles more with forms of <b>visual
-                    + behavioral</b> generalization. OpenVLA performs the best
-                    at understanding object properties which could be due to
-                    it having the largest language model backbone, but it still
-                    struggles with other forms of <b>semantic</b> generalization. \( \pi_0 \)
-                    generally performs the best across all axes, possibly due to
+                    noticeably worse at <b>visual</b> generalization,
+                    while MiniVLA struggles more with <b>visual
+                    + behavioral</b>. OpenVLA is the best
+                    at understanding object properties, but still
+                    struggles with other <b>semantic</b> axes \( \pi_0 \)
+                    generally performs the best, possibly due to
                     a more capable VLM backbone (PaliGemma), and/or better
-                    architecture design (flow-based action chunking). However,
-                    like the other models, \( \pi_0 \) still generally struggles in terms
+                    architecture (flow-based action chunking). However,
+                    all models generally struggle in terms
                     of absolute performance for most axes.
                 </p>
                 </div>
@@ -358,7 +329,8 @@
         <div class="row">
             <div class="col-md-12">
                 <p>
-                    We also consider varying different model design decisions to better understand their impact on generalization.
+                    We also consider varying different model design decisions to better understand their impact on generalization,
+                    with <i>t</i>-tests to assess statistical significance.
                 </p>
             </div>
         </div>
@@ -368,76 +340,68 @@
 
                 <div style="width: 50%; float: left; text-align:center; margin: 0 auto; display: inline-block">
                     <div style="width: 80%; float: left; text-align:center; margin: 0 auto">
-                        <a href="https://stargen-taxonomy.github.io/img/STAR-GEN/results/bridge_vs_oxe.png" target="_blank">
+                        <a href="https://stargen-taxonomy.github.io/paper/results/bridge_vs_oxe.png" target="_blank">
                             <figure>
-                                <img src="img/STAR-GEN/results/bridge_vs_oxe.png" class="img-responsive">
+                                <img src="paper/results/bridge_vs_oxe.png" class="img-responsive">
                             </figure>
                         </a>
                         <figcaption style="text-align: left;">(a) <b>Scaling Robot Data</b>:
-                            We compare training on Bridge V2 only to using a data mixture
-                            from Open X-Embodiment (OXE). Consistent with prior work, we find that
-                            larger and more diverse robot datasets can significantly improve
-                            overall generalization. However, while
-                            generalization improves along several axes, those that the Bridge-only model
-                            struggled with the most (e.g., Viewpoint, Morphed Objects,
-                            Multi-Object Referencing) do not improve significantly.</figcaption>
+                            We compare our Bridge-only OpenVLA with a version trained on a significantly larger,
+                            cross-embodiment OXE mixture. Consistent with prior work,
+                            we find that larger and more diverse datasets can significantly improve forms of generalization,
+                            such as for <b>visual + behavioral</b> axes (M = 0.22 vs. M = 0.48), t(7) = -2.76, p = 0.028.
+                            However, the axes on which the Bridge-only model struggled the most
+                            (Viewpoint, Morphed Objects, Multi-Object Referencing) do not improve significantly.</figcaption>
                     </div>
                 </div>
 
                 <div style="width: 50%; float: left; text-align:center; margin: 0 auto; display: inline-block">
                     <div style="width: 80%; float: left; text-align:left; margin: 0 auto">
-                        <a href="https://stargen-taxonomy.github.io/img/STAR-GEN/results/llm_scaling.png" target="_blank">
+                        <a href="https://stargen-taxonomy.github.io/paper/results/llm_scaling.png" target="_blank">
                             <figure>
-                                <img src="img/STAR-GEN/results/llm_scaling.png" class="img-responsive">
+                                <img src="paper/results/llm_scaling.png" class="img-responsive">
                             </figure>
                         </a>
-                        <figcaption style="text-align: left;">(b) <b>Scaling LLM Backbone</b>: We compare VLA
-                            policies that share the same architecture and differ only in
-                            the large language model (LLM) backbone. We find that
-                            the larger LLM backbone does improve <b>semantic</b> generalization,
-                            which makes intuitive sense. However, there still remain
-                            large deficiencies in terms of absolute performance for these
-                            axes, and there is much less effect on the others, suggesting
-                            that scaling LLM size only has limited benefits.</figcaption>
+                        <figcaption style="text-align: left;">(b) <b>Scaling LLM Backbone</b>:
+                            We compare VLA policies that differ only in the large language model (LLM) backbone.
+                            Specifically, we compare OpenVLA (Bridge, FT), using Llama 2 7B, and MiniVLA (Bridge, --VQ, FT), using Qwen2.5 0.5B.
+                            We find that while the larger LLM improves <b>semantic</b> axes,
+                            it is not by a significant amount (M = 0.18 vs. M = 0.35), t(7) = -1.87, p = 0.104.
+                            Absolute performance for these and other axes also remain low,
+                            suggesting that scaling LLMs only has limited benefits.</figcaption>
                     </div>
                 </div>
 
 
                 <div style="width: 50%; float: left; text-align:center; margin: 0 auto; display: inline-block">
                     <div style="width: 80%; float: left; text-align:center; margin: 0 auto">
-                        <a href="https://stargen-taxonomy.github.io/img/STAR-GEN/results/vqa_coft.png" target="_blank">
+                        <a href="https://stargen-taxonomy.github.io/paper/results/vqa_coft.png" target="_blank">
                             <figure>
-                                <img src="img/STAR-GEN/results/vqa_coft.png" class="img-responsive">
+                                <img src="paper/results/vqa_coft.png" class="img-responsive">
                             </figure>
                         </a>
-                        <figcaption style="text-align: left;">(c) <b>VQA Co-training</b>: we investigate the impact
-                            of co-training with general visual-question answering (VQA)
-                            data, which has been suggested in prior work to improve
-                            VLA generalization. We find that VQA co-training does
-                            generally improve generalization, but surprisingly has a mixed
-                            effect for <b>semantic</b> axes, improving for 3 of them (Language
-                            Rephrase, Multi-Object Referencing, Internet Knowledge), but
-                            hurting another (Object Properties). This could indicate that
-                            there is room for improvement when co-training VLAs, such
-                            as by using VQA data that is targeted for inducing various
-                            forms of policy generalization, rather than general VQA data.</figcaption>
+                        <figcaption style="text-align: left;">(c) <b>VQA Co-training</b>:
+                            We investigate co-training with visual-question answering (VQA) data,
+                            which prior work has shown to improve generalization.
+                            We find this can help, such as for <b>visual</b> axes (M = 0.30 vs. M = 0.45), t(7) = -2.39, p = 0.048.
+                            However, there is surprisingly a mixed effect for <b>semantic</b> axes (M = 0.38 vs. M=  0.42), t(7) = -0.51, p = 0.626,
+                            improving three of them, but hurting Object Properties.</figcaption>
                     </div>
                 </div>
 
                 <div style="width: 50%; float: left; text-align:center; margin: 0 auto; display: inline-block">
                     <div style="width: 80%; float: left; text-align:center; margin: 0 auto">
-                        <a href="https://stargen-taxonomy.github.io/img/STAR-GEN/results/vq_vs_binning.png" target="_blank">
+                        <a href="https://stargen-taxonomy.github.io/paper/results/vq_vs_binning.png" target="_blank">
                             <figure>
-                                <img src="img/STAR-GEN/results/vq_vs_binning.png" class="img-responsive">
+                                <img src="paper/results/vq_vs_binning.png" class="img-responsive">
                             </figure>
                         </a>
                         <figcaption style="text-align: left;">(d) <b>Vector Quantized Actions</b>:
-                            we investigate the effect of removing vector quantized action chunking
-                            (–VQ) from MiniVLA, and instead using the binning-
-                            based tokenization from OpenVLA. We find that for nearly all
-                            axes (except Interacting Scene), this change hurts generalization. This is perhaps because action chunking helps the policy
-                            resolve action uncertainty and multi-modality by committing
-                            to certain action sequences, as hypothesized in prior work</figcaption>
+                            We investigate using binning-based tokenization instead of vector quantized action chunking with MiniVLA.
+                            We find that VQ action chunking helps nearly all axes,
+                            including <b>visual</b> axes by a significant amount (M = 0.38 vs. M = 0.62), t(7) = -2.38, p = 0.049.
+                            This highlights the importance of action chunking and tokenization methods,
+                            as also suggested by prior work.</figcaption>
                     </div>
                 </div>
             </div>
@@ -600,7 +564,6 @@
             <span class="vb dot slide-index-0" onclick="currentSlide(9, idx=0)">ISC</span>
             <span class="vb dot slide-index-0" onclick="currentSlide(10, idx=0)">MOBJ</span>
             <span class="sb dot slide-index-0" onclick="currentSlide(11, idx=0)">SMO</span>
-            <!-- <span class="sb dot slide-index-0" onclick="currentSlide(13, idx=0)">VRB</span> -->
             <span class="vsb dot slide-index-0" onclick="currentSlide(12, idx=0)">NOBJ</span>
         </div>
 
@@ -753,7 +716,6 @@
             <span class="vb dot slide-index-1" onclick="currentSlide(8, idx=1)">POSE</span>
             <span class="vb dot slide-index-1" onclick="currentSlide(9, idx=1)">ISC</span>
             <span class="vb dot slide-index-1" onclick="currentSlide(10, idx=1)">MOBJ</span>
-            <!-- <span class="sb dot slide-index-1" onclick="currentSlide(11, idx=1)">SMO</span> -->
             <span class="sb dot slide-index-1" onclick="currentSlide(11, idx=1)">VRB</span>
             <span class="vsb dot slide-index-1" onclick="currentSlide(12, idx=1)">NOBJ</span>
         </div>
@@ -907,7 +869,6 @@
             <span class="vb dot slide-index-2" onclick="currentSlide(8, idx=2)">POSE</span>
             <span class="vb dot slide-index-2" onclick="currentSlide(9, idx=2)">ISC</span>
             <span class="vb dot slide-index-2" onclick="currentSlide(10, idx=2)">MOBJ</span>
-            <!-- <span class="sb dot slide-index-2" onclick="currentSlide(11, idx=2)">SMO</span> -->
             <span class="sb dot slide-index-2" onclick="currentSlide(11, idx=2)">VRB</span>
             <span class="vsb dot slide-index-2" onclick="currentSlide(12, idx=2)">NOBJ</span>
         </div>
@@ -947,15 +908,6 @@
                     </video>
                     <p><b>V-OBJ</b>: <i>gray plate</i></p>
                 </div>
-
-                <!--VISUAL VIEW -->
-                <!-- <div class="video-container slide-index-3" style="text-align: center;">
-                    <video width="85%" controls loop autoplay muted>
-                        <source src="videos/plate/plate_camera.mp4" type="video/mp4">
-                        Your browser does not support the video tag.
-                    </video>
-                    <p><b>V-VIEW</b>: <i>new camera view</i></p>
-                </div> -->
 
                 <!-- SEMANTIC OBJECT PROP -->
                 <div class="video-container slide-index-3" style="text-align: center;">
@@ -1021,24 +973,6 @@
                     <p><b>VB-MOBJ</b>: <i>red bowl-like plate</i></p>
                 </div>
 
-                <!-- SEMANTIC+BEHAVIORAL NEW VERB  -->
-                <!-- <div class="video-container slide-index-3" style="text-align: center;">
-                    <video width="85%" controls loop autoplay muted>
-                        <source src="videos/plate/plate_to_counter.mp4" type="video/mp4">
-                        Your browser does not support the video tag.
-                    </video>
-                    <p><b>SB-SMO</b>: Put plate on counter</p>
-                </div> -->
-
-                <!-- VISUAL+SEMANTIC+BEHAVIORAL NEW OBJECT -->
-                <!-- <div class="video-container slide-index-3" style="text-align: center;">
-                    <video width="85%" controls loop autoplay muted>
-                        <source src="videos/plate/spoon.mp4" type="video/mp4">
-                        Your browser does not support the video tag.
-                    </video>
-                    <p><b>VSB-NOBJ</b>: Put spoon in sink</p>
-                </div> -->
-
                 <div>
                     <!-- Next and previous buttons -->
                     <a class="prev" onclick="plusSlides(-1, idx=3)">&#10094;</a>
@@ -1053,7 +987,6 @@
         <div style="text-align: center; display: block;">
             <span class="vis dot slide-index-3" onclick="currentSlide(1, idx=3)">SC</span>
             <span class="vis dot slide-index-3" onclick="currentSlide(2, idx=3)">OBJ</span>
-            <!-- <span class="vis dot slide-index-3" onclick="currentSlide(3, idx=3)">VIEW</span> -->
             <span class="sem dot slide-index-3" onclick="currentSlide(3, idx=3)">PROP</span>
             <span class="sem dot slide-index-3" onclick="currentSlide(4, idx=3)">LANG</span>
             <span class="sem dot slide-index-3" onclick="currentSlide(5, idx=3)">MO</span>
@@ -1061,8 +994,6 @@
             <span class="vb dot slide-index-3" onclick="currentSlide(7, idx=3)">POSE</span>
             <span class="vb dot slide-index-3" onclick="currentSlide(8, idx=3)">ISC</span>
             <span class="vb dot slide-index-3" onclick="currentSlide(9, idx=3)">MOBJ</span>
-            <!-- <span class="sb dot slide-index-3" onclick="currentSlide(11, idx=3)">SMO</span> -->
-            <!-- <span class="vsb dot slide-index-3" onclick="currentSlide(12, idx=3)">NOBJ</span> -->
         </div>
 
         <br>
@@ -1107,11 +1038,11 @@
                 <div class="form-group col-md-10 col-md-offset-1">
                     <div class="form-group col-md-10 col-md-offset-1">
                     <textarea id="bibtex" class="form-control" readonly>
-@inproceedings{taxonomy2025arxiv,
-  title={A Taxonomy for Evaluating Generalist Robot Policies},
+@article{gao2026taxonomy,
+  title={A Taxonomy for Evaluating Generalist Robot Manipulation Policies},
   author={Gao, Jensen and Belkhale, Suneel and Dasari, Sudeep and Balakrishna, Ashwin and Shah, Dhruv and Sadigh, Dorsa},
-  journal={arXiv preprint arXiv:2503.01238},
-  year={2025}
+  journal={IEEE Robotics and Automation Letters (RA-L)},
+  year={2026}
 }</textarea>
                 </div>
                 </div>
